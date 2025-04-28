@@ -32,37 +32,38 @@ context.
 
 The overall objective of the Technical Committee is to determine how to evaluate
 an AI tool's decision making algorithm when used with marginalized or outlier
-individuals; that it discriminates against them. The main objective leads to
-sub-goals.
+individuals; to detect whether the use of the AI discriminates against them.
+This main objective leads to some sub-goals.
 
 The committee will develop definitions of "marginalized" and "outlier" to fully
-contextualize their importance and relevance to the evaluation of an AI model. 
-This will help operationalize the notion of statistical discrimination.  Some
-things to consider in this regard are the reasons why an individual is deemed
+contextualize their importance and relevance to the evaluation of an AI model.
+This will help operationalize the notion of statistical discrimination. 
+Considerations in this regard include the reasons why an individual is deemed
 marginalized or an outlier.  A possible reason, or example, is that they were
-either not part of the training data or were poorly represented within it. 
+either not part of the training data or were poorly represented within it.
 Another reason might be the nature of the model or algorithm that the AI uses in
-making its decisions.  That model or algorithm might producc discriminatory
-results in the context of an outlier and that would indicate it is inappropriate
-to use in this case.
+making its decisions.  That model or algorithm might produce discriminatory
+results in the context of a marginalized individual and that would indicate it
+is inappropriate to use in that case.
 
 The committee will also delineate the kinds of generative AI that are relevant
-to the trust meter specification.  For example, an AI that is definitely
-out-of-scope is one that generates photorealistic images of human faces. This
-kind of AI is not properly described as making any decisions. However, a large
-language model (LLM) may or may be in scope. Consider this scenario: An AI
+to the specification.  For example, an AI that is definitely out-of-scope is one
+that generates photorealistic images of human faces. This kind of AI is not
+properly described as making any decisions. However, a large language model
+(LLM) may or may be in scope. For example, consider this scenario: An AI
 decision tool is known to discriminate and it uses an LLM during its processing
 to arrive at a decision.  The LLM might be the source of the discrimination;
-hence the LLM is in scope in this scenario.
+hence, the LLM is in scope in this scenario.
 
 The committee will develop and document techniques for evaluating an AI in order
-to determine whether it discriminates or can potentially discriminate.  These
-techniques will allow an operator to judge whether to use the AI in a specific
-context.
+to determine whether it discriminates or can potentially discriminate.  This
+might involve the methods used in the field of explainable AI. The  techniques
+that are developed by the technical committee will allow an operator to judge
+whether an AI can be trusted when used in a specific context.
 
 The above are the main objectives of the committee.  The committee, in its work,
-may discover other relevant objectives, and can note them as part of the
-specification.
+may discover other related and relevant objectives, and can include and develop
+them as part of the specification.
 
 - Includes Technical Experts who will draft the Technical Specification
   - Consider gender responsiveness when drafting the Technical Specification
@@ -118,8 +119,10 @@ other stakeholders may have meetings at other times as needed.
 See: [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ## Contributor Licence
+
 - possibly use the one from [fluid](https://fluidproject.atlassian.net/wiki/spaces/fluid/pages/11547472/Fluid+Licensing)
-- or the one from [ASC](https://accessible.canada.ca/creating-accessibility-standards/asc-62-accessible-equitable-artificial-intelligence-systems/2-asc-legal-notice), specifically section 2.5
+- [Contributor Licence](./CONTRIBUTOR_LICENCE.md) derived from [ASC](https://accessible.canada.ca/creating-accessibility-standards/asc-62-accessible-equitable-artificial-intelligence-systems/2-asc-legal-notice),
+  specifically section 2.5 but re-worded for use with the IDRC.
 - or elsewhere.
 
 ## Licence
