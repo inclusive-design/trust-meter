@@ -9,7 +9,10 @@
 - [Project Schedule](#project-schedule)
 - [Meeting Schedule](#meeting-schedule)
 - [Consensus Building](#consensus-building)
-- [Code of Conduct](#code-of-conduct)
+- [Communication and Conduct](#communication-and-conduct)
+- [Contributor Licence](#contributor-licence)
+- [Licence](#licence)
+- [Glossary](#glossary)
 
 ## Overview
 
@@ -28,7 +31,7 @@ decision is made is out-of-distribution relative to the training set the model
 is trained on, meaning the AI should not be trusted to make decisions in this
 context.
 
-## Purpose of the Committee
+## Purpose of the Technical Committee
 
 The overall objective of the Technical Committee is to determine how to evaluate
 an AI tool's decision making algorithm when used with marginalized or outlier
@@ -137,4 +140,3 @@ Standard of Canada (NSC). This may be for cases such as an environment
 undergoing rapid change. A Technical Specification is not a standard and does
 not purport to be one. However, an NSC may be developed in the future to
 supersede the Technical Specification.
-
