@@ -81,8 +81,16 @@ them as part of the specification.
 
 ## Membership Composition
 
-- Available to work in either of Canada's official languages (English and
-  French).
+Since the specification is being developed for the Standards Council of Canada,
+a committee member shall work in either English or French, the two official
+languages of Canada.
+
+If a committee member has special needs, they shall be accommodated.  For
+example, if a committee member uses ASL or LSQ as their means of communication,
+then a translation service shall be provided so that all members on the
+committee can communicate with one another meaningfully.
+
+- Other requirements?
 
 ## Project Schedule
 
