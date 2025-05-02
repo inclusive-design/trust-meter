@@ -123,6 +123,12 @@ Committee is expected to meet synchronously monthly.
 Additional meetings between Technical Experts, the Technical Committee, and
 other stakeholders may have meetings at other times as needed.
 
+### Meeting Methodology and Collaborative Processes
+
+The means and tools used by the committee for meetings and drafting the
+specifications, including tracking versions of it and changes to it, shall be
+decided by the committee members during their earliest meetings.
+
 ## Consensus Building
 
 ## Communication and Conduct
