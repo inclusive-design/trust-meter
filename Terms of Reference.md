@@ -92,6 +92,13 @@ committee can communicate with one another meaningfully.
 
 - Other requirements?
 
+### Roles and Responsibilities
+
+The committee members shall discuss and determine their roles during their
+eariest meetings. Examples of roles include, but are not limited to, chair,
+note-taker, specification editor(s), and so on. The need to create new roles or
+change roles as time demands shall be decided by the committee as necessary.
+
 ## Project Schedule
 
 ### Key dates
