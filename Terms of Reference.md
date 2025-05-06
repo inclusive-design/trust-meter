@@ -33,7 +33,7 @@ context.
 
 ## Purpose of the Technical Committee
 
-The specification applies to machine learning (ML) based decsion tools. Hence,
+The specification applies to machine learning (ML) based decision tools. Hence,
 the focus of the technical committee is limited to the subset of AI that
 uses machine learning with large data sets for training and statistical
 algorithms to develop a model that is used for decision making.
@@ -73,6 +73,18 @@ The above are the main objectives of the committee.  The committee, in its work,
 may discover other related and relevant objectives, and can include and develop
 them as part of the specification.
 
+Administrative issues that the technical committee will handle include:
+
+- [Meeting Schedule](#meeting-schedule)
+  - The technical committee shall decide among themselves when and how they will
+    conduct their meetings.
+- [Meeting Methodology and Collaborative Processes](#meeting-methodology-and-collaborative-processes)
+  - The committee members shall decide what tools and processes they will use
+    to communicate with one another and to produce drafts of the specification.
+- [Roles and Responsibilities](#role-and-responsibilities)
+  - The committee members shall discuss and decide their roles and
+    responsibilities.
+
 - Includes Technical Experts who will draft the Technical Specification
   - Consider gender responsiveness when drafting the Technical Specification
   - Consider environmental responsiveness when drafting the Technical 
@@ -100,7 +112,7 @@ committee can communicate with one another meaningfully.
 ### Roles and Responsibilities
 
 The committee members shall discuss and determine their roles during their
-eariest meetings. Examples of roles include, but are not limited to, chair,
+earliest meetings. Examples of roles include, but are not limited to, chair,
 note-taker, specification editor(s), and so on. The need to create new roles or
 change roles as time demands shall be decided by the committee as necessary.
 
