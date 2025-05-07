@@ -92,12 +92,14 @@ Administrative issues that the technical committee will handle include:
   - The committee members shall discuss and decide their roles and
     responsibilities.
 
-- Includes Technical Experts who will draft the Technical Specification
   - Consider gender responsiveness when drafting the Technical Specification
   - Consider environmental responsiveness when drafting the Technical 
     Specification
 
 ## Membership Composition
+
+The technical committee will include members who are experts in the field of
+statistical reasoning, statistical data processing, machine learning, and AI.
 
 Since the specification is being developed for the Standards Council of Canada,
 a committee member shall work in either English or French, the two official
@@ -108,7 +110,7 @@ example, if a committee member uses ASL or LSQ as their means of communication,
 then a translation service shall be provided so that all members on the
 committee can communicate with one another meaningfully.
 
-- Other requirements?
+- Other requirements?  Who else should be on the committee?
 
 ### Roles and Responsibilities
 
