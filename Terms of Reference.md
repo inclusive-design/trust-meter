@@ -54,14 +54,14 @@ in making its decisions.  That model or algorithm might produce discriminatory
 results in the context of a marginalized individual and that would indicate it
 is inappropriate to use in this particular case.
 
-The committee will also delineate the kinds of generative ML-AI that are
-relevant to the specification.  For example, an AI that is definitely
-out-of-scope is one that generates photorealistic images of human faces. This
-kind of AI is not properly described as making any decisions. However, a large
-language model (LLM) may or may be in scope. For example, consider this
-scenario: An AI decision tool is known to discriminate and it uses an LLM during
-its processing to arrive at a decision.  The LLM might be the source of the
-discrimination; hence, the LLM is in scope in this scenario.
+The committee will also delineate the kinds of ML-AI that are relevant to the
+specification.  For example, an AI that is definitely out-of-scope is one that
+generates photorealistic images of human faces. This kind of AI is not properly
+described as making any decisions. However, a large language model (LLM) may or
+may be in scope. For example, consider this scenario: An AI decision tool is
+known to discriminate and it uses an LLM during its processing to arrive at a
+decision.  The LLM might be the source of the discrimination; hence, the LLM is
+in scope in this scenario.
 
 The committee will develop and document techniques for evaluating an ML-AI in
 order to determine whether it discriminates or can potentially discriminate.
