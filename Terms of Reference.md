@@ -92,6 +92,7 @@ Administrative issues that the technical committee will handle include:
   - The committee members shall discuss and decide their roles and
     responsibilities.
 
+- Older Material from the SOW:
   - Consider gender responsiveness when drafting the Technical Specification
   - Consider environmental responsiveness when drafting the Technical 
     Specification
