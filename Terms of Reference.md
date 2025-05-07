@@ -73,6 +73,13 @@ The above are the main objectives of the committee.  The committee, in its work,
 may discover other related and relevant objectives, and can include and develop
 them as part of the specification.
 
+The committee shall publish a number of drafts of the specification and solicit
+comments and feedback for review. It will address these questions and comments
+and generally facilitate the review process.  In this regard, the committee
+shall provide guidance on whether a full public review or a peer review or both
+is required. After the review(s) are completed the technical committee shall
+finalize the specification and vote on its publication at large.
+
 Administrative issues that the technical committee will handle include:
 
 - [Meeting Schedule](#meeting-schedule)
@@ -89,12 +96,6 @@ Administrative issues that the technical committee will handle include:
   - Consider gender responsiveness when drafting the Technical Specification
   - Consider environmental responsiveness when drafting the Technical 
     Specification
-  - Respond to questions/comments during review of Technical Specification
-  - Technical Experts will provide guidance on whether a public or peer review
-    of the Technical Specification is required
-- Vote on publication of Technical Specification
-- Help review Technical Specification, including providing feedback on the 
-  Technical Specification, and facilitating the review process.
 
 ## Membership Composition
 
