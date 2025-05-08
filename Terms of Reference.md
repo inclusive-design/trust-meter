@@ -161,7 +161,7 @@ decided by the committee members during their earliest meetings.
 
 ## Communication and Conduct
 
-See: [Code of Conduct](CODE_OF_CONDUCT.md)
+Conduct of participants in this specification effort is governed by [SCC's Member Code of Conduct](https://scc-ccn.ca/system/files/2024-05/scc_pol_member-code-of-conduct_v1_2023-12-19.pdf).
 
 ## Contributor Licence
 
