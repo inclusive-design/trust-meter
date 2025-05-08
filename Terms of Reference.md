@@ -82,6 +82,8 @@ finalize the specification and vote on its publication at large.
 
 Administrative issues that the technical committee will handle include:
 
+- Deciding on an appropriate open document licence for the technical specification.
+  - The licence must meet the requirements listed in the [Licence](#licence) section.
 - [Meeting Schedule](#meeting-schedule)
   - The technical committee shall decide among themselves when and how they will
     conduct their meetings.
@@ -171,7 +173,19 @@ Conduct of participants in this specification effort is governed by [SCC's Membe
 
 ## Licence
 
-See [LICENCE.md](LICENCE.md)
+The licensing requirements are that a free/open document licence is used that:
+
+1. Attributes the original work to the IDRC, OCAD University,
+2. Allows any software associated with the technical specification to be
+   licensed by a separate free/open software licence, 
+3. Permits others to make modifications to the specification provided they
+   attribute the original work to the IDRC, and that they release their
+   modifications under same licensing terms as the original.
+
+Examples of licences that meet these terms are the [Creative Commons Attribution-ShareAlike licence](https://creativecommons.org/licenses/by-sa/4.0/)
+(CC BY-AT 4.0) and the [Gnu Free Document Licence](https://www.gnu.org/licenses/fdl-1.3.en.html) (Gnu FDL).
+
+The committee shall decide upon a suitable licence given the above criteria.
 
 ## Glossary
 
