@@ -105,22 +105,47 @@ Since the specification is being developed for the Standards Council of Canada,
 a committee member shall work in either English or French, the two official
 languages of Canada.
 
-If a committee member has special needs, they shall be accommodated.  For
-example, if a committee member uses ASL or LSQ as their means of communication,
-then a translation service shall be provided so that all members on the
-committee can communicate with one another meaningfully.
+### Equitable Participation Support
+
+The needs of committee members to participate equitably will be supported. This
+includes, but is not limited to, providing French/English translation services,
+American Sign Language (ASL) interpretation, and Langue des Signes Québécoise
+(LSQ) interpretation.
 
 Efforts shall be made to address SCC's [Gender responsivness](https://scc-ccn.ca/areas-work/diversity-and-inclusion/gender-and-standardization)
-goals when developing the technical specification.  With respect to membership
-within the technical committee, efforts will be made such that all genders are
-represented.
+goals when developing the technical specification, and consider the [UNECE Guidelines on Developing Gender-Responsive Standards](https://unece.org/sites/default/files/2022-12/ECE_TRADE_472E.pdf).
+With respect to membership within the technical committee, efforts will be made
+such that all genders are represented.
 
 ### Roles and Responsibilities
 
 The committee members shall discuss and determine their roles during their
-earliest meetings. Examples of roles include, but are not limited to, chair,
-note-taker, specification editor(s), and so on. The need to create new roles or
-change roles as time demands shall be decided by the committee as necessary.
+earliest meetings. Examples of roles include, but are not limited to, meeting
+convenor, chair, note-taker, specification editor(s), and so on. The need to
+create new roles or change roles as time demands shall be decided by the
+committee as necessary.
+
+#### Expectations for Committee Members:
+
+1. Active Participation:
+  - Engagement: Actively participate in discussions and meetings, sharing your
+    perspectives and expertise.
+  - Preparation: Come prepared to meetings by reviewing relevant materials and
+    information in advance.
+2. Collaboration:
+  - Open Dialogue: Engage in open and respectful dialogue, listening to and
+    considering the viewpoints of others.
+  - Constructive Feedback: Provide constructive feedback and suggestions to
+    help refine ideas and proposals.
+
+#### Role of the Meeting Convenor:
+
+- Facilitation: The meeting convenor will facilitate discussions, ensuring that
+  all voices are heard and that the process remains inclusive and respectful.
+- Time Management: The convenor will manage the time allocated for discussions
+  to ensure efficient and productive meetings.
+- Conflict Resolution: The convenor will assist in mediating conflicts and
+  guiding the committee towards consensus.
 
 ## Project Schedule
 
@@ -161,6 +186,61 @@ decided by the committee members during their earliest meetings.
 
 ## Consensus Building
 
+<dl>
+<dt>Objective:</dt>
+<dd>
+  To ensure that decisions made by the committee reflect the collective
+  agreement and support of its members, fostering a collaborative and inclusive
+  environment.
+</dd>
+</dl>
+
+### Principles:
+
+<dl>
+<dt>Inclusivity:</dt>
+<dd>
+  All committee members should have the opportunity to voice their opinions and
+  contribute to discussions.
+</dd>
+<dt>Transparency:</dt>
+<dd>
+  The process of reaching consensus should be clear and open to all members.
+</dd>
+<dt>Respect:</dt>
+<dd>
+  Members should respect differing viewpoints and work towards finding common
+  ground.
+</dd>
+</dl>
+
+### Process:
+
+1. Consensus Seeking:
+  - Facilitation: The meeting convenor will guide discussions and ensure
+    balanced participation.
+  - Clarification: Members will address any questions or concerns to ensure
+    understanding and agreement.
+  - Support: Members will work collaboratively to find common ground and support
+    the collective decision-making process.
+
+2. Decision Making:
+  - Unanimous Agreement: Aim for unanimous agreement where possible.
+  - Voting: Where a vote is required, a motion will pass if it receives a
+    minimum of two-thirds (2/3) of the votes cast by the committee members
+    present.
+  - Documentation: Ensure that decisions and the process followed to reach them
+    are accurately recorded.
+
+### Conflict Resolution:
+
+- Mediation: In cases where consensus cannot be reached, a mediation process
+  will be initiated. A neutral mediator from IDRC will work with the involved
+  parties to resolve conflicts and find a mutually acceptable solution.
+- Escalation: If mediation does not resolve the conflict, the issue will be
+  escalated to a higher authority within OCAD University or the Standards
+  Council of Canada for a final decision.
+
 ## Communication and Conduct
 
 Conduct of participants in this specification effort is governed by [SCC's Member Code of Conduct](https://scc-ccn.ca/system/files/2024-05/scc_pol_member-code-of-conduct_v1_2023-12-19.pdf).
@@ -183,7 +263,7 @@ The licensing requirements are that a free/open document licence is used that:
    modifications under same licensing terms as the original.
 
 Examples of licences that meet these terms are the [Creative Commons Attribution-ShareAlike licence](https://creativecommons.org/licenses/by-sa/4.0/)
-(CC BY-AT 4.0) and the [Gnu Free Document Licence](https://www.gnu.org/licenses/fdl-1.3.en.html) (Gnu FDL).
+(CC BY-AT 4.0) and the [GNU Free Document Licence](https://www.GNU.org/licenses/fdl-1.3.en.html) (GNU FDL).
 
 The committee shall decide upon a suitable licence given the above criteria.
 
