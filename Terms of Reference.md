@@ -82,8 +82,10 @@ finalize the specification and vote on its publication at large.
 
 Administrative issues that the technical committee will handle include:
 
-- Deciding on an appropriate open document licence for the technical specification.
-  - The licence must meet the requirements listed in the [Licence](#licence) section.
+- Deciding on an appropriate open document licence for the technical
+  specification.
+  - The licence must meet the requirements listed in the [Licence](#licence)
+    section.
 - [Meeting Schedule](#meeting-schedule)
   - The technical committee shall decide among themselves when and how they will
     conduct their meetings.
@@ -93,11 +95,6 @@ Administrative issues that the technical committee will handle include:
 - [Roles and Responsibilities](#role-and-responsibilities)
   - The committee members shall discuss and decide their roles and
     responsibilities.
-
-- Older Material from the SOW:
-  - Consider gender responsiveness when drafting the Technical Specification
-  - Consider environmental responsiveness when drafting the Technical 
-    Specification
 
 ## Membership Composition
 
@@ -113,7 +110,10 @@ example, if a committee member uses ASL or LSQ as their means of communication,
 then a translation service shall be provided so that all members on the
 committee can communicate with one another meaningfully.
 
-- Other requirements?  Who else should be on the committee?
+Efforts shall be made to address SCC's [Gender responsivness](https://scc-ccn.ca/areas-work/diversity-and-inclusion/gender-and-standardization)
+goals when developing the technical specification.  With respect to membership
+within the technical committee, efforts will be made such that all genders are
+represented.
 
 ### Roles and Responsibilities
 
