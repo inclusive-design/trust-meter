@@ -247,9 +247,9 @@ Conduct of participants in this specification effort is governed by [SCC's Membe
 
 ## Contributor Licence
 
-- possibly use the one from [fluid](https://fluidproject.atlassian.net/wiki/spaces/fluid/pages/11547472/Fluid+Licensing)
-- [Contributor Licence](./CONTRIBUTOR_LICENCE.md) derived from [ASC](https://accessible.canada.ca/creating-accessibility-standards/asc-62-accessible-equitable-artificial-intelligence-systems/2-asc-legal-notice),
-  specifically section 2.5 but re-worded for use with the IDRC.
+During review of drafts of the technical specification, the committee may
+solicit input from individuals not on the committee.  Any comments or critique
+offered for consideration shall be provided under the terms of the [Contributor Licence](./CONTRIBUTOR_LICENCE.md).
 
 ## Licence
 
