@@ -237,7 +237,7 @@ decided by the committee members during their earliest meetings.
 - Mediation: In cases where consensus cannot be reached, a mediation process
   will be initiated. A neutral mediator from IDRC will work with the involved
   parties to resolve conflicts and find a mutually acceptable solution.
-- Escalation: If mediation does not resolve the conflict, the issue will be
+- Escalation: If mediation does not resolve the conflict or a neutral mediator cannot be obtained, the issue will be
   escalated to a higher authority within OCAD University or the Standards
   Council of Canada for a final decision.
 
