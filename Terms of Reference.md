@@ -186,14 +186,6 @@ decided by the committee members during their earliest meetings.
 
 ## Consensus Building
 
-<dl>
-<dt>Objective:</dt>
-<dd>
-  To ensure that decisions made by the committee reflect the collective
-  agreement and support of its members, fostering a collaborative and inclusive
-  environment.
-</dd>
-</dl>
 
 ### Principles:
 
