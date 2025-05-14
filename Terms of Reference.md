@@ -248,7 +248,7 @@ Conduct of participants in this specification effort is governed by [SCC's Membe
 ## Contributor Licence
 
 During review of drafts of the technical specification, the committee may
-solicit input from individuals not on the committee.  Any comments or critique
+solicit input from individuals not on the committee. Any comments or critique
 offered for consideration shall be provided under the terms of the [Contributor Licence](./CONTRIBUTOR_LICENCE.md).
 
 ## Licence
