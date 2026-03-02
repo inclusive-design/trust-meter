@@ -2,7 +2,7 @@
 title: Trust meter Introduction
 ---
 
-======================================================================
+----
 
 Cover note: This is a stab at a high-level organization for the guidance the Trust Meter project is being asked for. Corrections, clarifications, and elaborations are appropriate throughout\-- this is intended only as a starting point. I've marked with \## one place where some more specifics are especially needed, but no doubt there are many others.
 
@@ -10,7 +10,7 @@ Something not indicated here is where we should insert examples. There might be 
 
 Cheers, Clayton
 
-=======================================================================
+----
 
 ## Purpose
 
