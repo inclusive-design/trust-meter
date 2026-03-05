@@ -1,24 +1,25 @@
 # Generate documents in the desired output formats.
 
 # Identify source and target files.
-exclusions=README.md
-sources=$(filter-out $(exclusions), $(wildcard *.md))
-html_targets=$(sources:.md=.html)
-pdf_targets=$(sources:.md=.pdf)
-docx_targets=$(sources:.md=.docx)
+exclusions:=README.md
+sources:=$(filter-out $(exclusions), $(wildcard *.md))
+html_targets:=$(sources:.md=.html)
+pdf_targets:=$(sources:.md=.pdf)
+docx_targets:=$(sources:.md=.docx)
 
 # Options
-style_options=-N
+pandoc_options:=-s -N
 
 # Implicit rules
 %.html : %.md
-	pandoc -s $(style_options) $< -o $@
+	pandoc $(pandoc_options) $< -o $@
 %.pdf : %.md
-	pandoc -s $(style_options) $< -o $@
+	pandoc $(pandoc_options) $< -o $@
 %.docx : %.md
-	pandoc -s $(style_options) $< -o $@
+	pandoc $(pandoc_options) $< -o $@
 
 # Targets
+.PHONY: all html pdf docs clean
 all: html pdf docx
 html: $(html_targets)
 pdf: $(pdf_targets)
