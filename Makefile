@@ -12,11 +12,11 @@ docx_targets:=$(patsubst %.md, $(destination)%.docx, $(sources))
 pandoc_options:=-s -N
 
 # Implicit rules
-$(destination)%.html : %.md
+$(destination)%.html : %.md $(destination)
 	pandoc $(pandoc_options) $< -o $@
-$(destination)%.pdf : %.md
+$(destination)%.pdf : %.md $(destination)
 	pandoc $(pandoc_options) $< -o $@
-$(destination)%.docx : %.md
+$(destination)%.docx : %.md $(destination)
 	pandoc $(pandoc_options) $< -o $@
 
 # Targets
@@ -26,5 +26,7 @@ html: $(html_targets)
 pdf: $(pdf_targets)
 docx: $(docx_targets)
 clean:
-	rm -f $(html_targets) $(pdf_targets) $(docx_targets)
+	rm -rf $(destination)
+$(destination):
+	[ -d $(destination) ] || mkdir $(destination)
 
