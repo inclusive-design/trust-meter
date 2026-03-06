@@ -1,6 +1,8 @@
-# Trust Meter Introduction
+---
+title: Trust meter Introduction
+---
 
---
+----
 
 Cover note: This is a stab at a high-level organization for the guidance the
 Trust Meter project is being asked for. Corrections, clarifications, and
@@ -22,7 +24,7 @@ problems possible at many junctures.
 
 Cheers, Clayton
 
---
+----
 
 ## Purpose
 
