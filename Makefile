@@ -28,5 +28,5 @@ docx: $(docx_targets)
 clean:
 	rm -rf $(destination)
 $(destination):
-	mkdir $(destination)
+	mkdir -p $(destination)
 
