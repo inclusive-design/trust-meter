@@ -41,10 +41,11 @@ discrimination.
 The risk is greatest if the system is used directly or indirectly to make
 decisions affecting the person's human rights or other legal interests.  When
 differences of gender, race, ethnicity, socio-economic position, or disability,
-for example, become salient to the operation of AI systems due to the appearance
-of outliers in data, there thus emerges a heightened risk of discriminatory
-decisions. Established practices of social marginalization are reinforceed,
-contrary to moral obligations and human rights standards. 
+for example, become salient to the operation of AI systems due to the
+under-representation or misrepreentation of outliers in data, there thus emerges
+a heightened risk of discriminatory decisions. Established practices of social
+marginalization are reinforceed, contrary to moral obligations and human rights
+standards. 
 
 [^1]: NIST/SEMATECH e-Handbook of Statistical Methods, [section
 7.1.6](https://www.itl.nist.gov/div898/handbook/prc/section1/prc16.htm).
