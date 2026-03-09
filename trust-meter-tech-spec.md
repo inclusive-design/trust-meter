@@ -73,13 +73,13 @@ Language Model (LLM).
 
 ## Kinds of AI tools.
 
-We distinguish two kinds of AI tools. One kind of tool is trained on a
-collection of examples, such as job applications, with designated correct
-responses provided for the examples. The training is intended to shape the tool
-so that its responses on the training examples approximates the designated
-responses, on the examples. The tool is then applied to new examples, and the
-hope is that it will respond appropriately to these. We’ll call these tools
-_example trained_, or ET.
+In the preceding definitions, we distinguish two kinds of AI tools. One kind of
+tool is trained on a collection of examples, such as job applications, with
+designated correct responses provided for the examples. The training is intended
+to shape the tool so that its responses on the training examples approximates
+the designated responses, on the examples. The tool is then applied to new
+examples, and the hope is that it will respond appropriately to these. We’ll
+call these tools _example trained_, or ET.
 
 A second kind of tool is exemplified by Large Language Models (LLMs). These
 systems are also trained, but not on specific examples of a particular task.
