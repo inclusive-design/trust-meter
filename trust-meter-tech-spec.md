@@ -105,7 +105,7 @@ ability to consult data sources outside themselves. For example, they may do Web
 searches, or look information up in private data bases, for example, collections
 of information about clients, or about the policies of an organization.
 
-## Potential problems for people with disabilities
+## Potential problems for marginalized groups
 
 ### Problems with ET tools
 
@@ -113,26 +113,29 @@ These different kinds of tools present different kinds of problems, with
 different possible remedies. Let’s consider first ET tools, along with FB tools
 in which examples are used, either in fine tuning or in prompts. An obvious
 problem arises if the examples used in creating or shaping these tools don’t
-include examples that reflect the situations or needs of people with
-disabilities. We’ll call this the _representation_ problem. It’s clear that if
-people with disabilities and their needs aren’t represented in the shaping of a
-tool, it’s very possible that the tool will produce inappropriate responses.
+include examples that reflect the situations or needs of a diversity of people,
+especially those at risk of discrimination. We’ll call this the _representation_
+problem.  It’s clear that if members of marginalized groups and their
+circumstances aren’t represented in the shaping of a tool, there's a real risk
+that the tool will produce inappropriate responses.
 
 However, even if representation is achieved, ET tools can be problematic for
-people with disabilities. Commonly, ET tools work by creating a mathematical
-model of the examples on which they are trained. This model can’t capture all
-the details of the examples, but forms a simplified, approximate picture of the
-examples. The training process pushes the model to do a good job on the average,
-not to give the correct response on every example. That means that the
-simplified model will be more accurate on examples whose features are common in
-the collection of examples, than on examples whose features are uncommon.
+people who are outliers in relevant respects. Commonly, ET tools work by
+creating a mathematical model of the examples on which they are trained. This
+model can’t capture all the details of the examples, but forms a simplified,
+approximate picture of the examples.  The training process pushes the model to
+do a good job on the average, not to give the correct response on every example.
+It follows that the simplified model will be more accurate on examples whose
+features are common in the collection of examples, than on examples whose
+features are uncommon.
 
-This works against people with disabilities, in many cases. Their situations are
-often different from those of most people, in many respects. For example, a
-person with a disability may have an unusual employment record. A model that
-does well in evaluating applicants with common employment records, and so looks
-good on the average, may do poorly for people with unusual records. We’ll call
-this the _averaging_ problem, associated with unusual examples, called outliers.
+This works against people who are already at risk of discrimination, in many
+cases.  Their situations are often different from the average or the norm, in
+relevant respects.  For example, a person with a disability may have an unusual
+employment record. A model that does well in evaluating applicants with common
+employment records, and so looks good on the average, may do poorly for people
+with unusual records.  We’ll call this the _averaging_ problem, associated with
+unusual examples, namely outliers.
 
 This problem is sometimes considered as the problem of _out of sample_ data. But
 that’s what we’re calling the _representation_ problem. The averaging problem
