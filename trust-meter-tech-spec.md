@@ -272,6 +272,13 @@ be risky. Rather than blocking an input, a guardrail could call for special
 processing, for example deliberately reframing a question, and comparing the
 responses obtained for different framings, before responding.
 
+In some applications, it may be possible to maintain a corpus of known, accurate
+responses that the system  can reproduce whenever substantively identical
+queries are made. This approach limits the number of novel responses that need
+to be created by FB systems. However, it is only effective if substantively
+identical prompts can be detected based on semantic similarity searches of the
+corpus.
+
 ### Testing
 
 Of course testing is one way to limit problems when systems are deployed.
