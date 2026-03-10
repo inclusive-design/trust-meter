@@ -355,9 +355,11 @@ appropriate response really is, including in unusual cases, not just anybody.
 The people who have the most stake in the correct operation of a system are
 often the people whose cases are being handled. There should be an easy feedback
 system in place so that users can speak up when they feel the system has not
-handled their case correctly.
+handled their case correctly. If legal rights or interests are at stake, 
+effective appeal and review procedures should be put in place to ensure adequate 
+human supervision.
 
-This feedback system should include clients having access to human assistance,
+The feedback system should include clients having access to human assistance,
 providing a way past the system that hasn’t understood their situation.
 Everybody knows how frustrating it can be when one can’t talk to a person, when
 some system isn’t doing what we need. This frustration won’t be any less when
