@@ -184,9 +184,9 @@ provides.
 Sometimes FB systems fabricate answers, for example by referring to sources of
 information that don’t actually exist.
 
-These problems obviously pose issues for all users, not just people with
-disabilities. But they may have special impact on people with cognitive
-limitations, who may be less able to detect and correct them.
+These problems obviously pose issues for all users, but they may have special
+impact on people with cognitive limitations, who may be less able to detect and
+correct them.
 
 ### Opacity
 
