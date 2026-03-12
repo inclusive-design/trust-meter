@@ -78,13 +78,13 @@ Language Model (LLM).
 
 ## Kinds of AI tools.
 
-We distinguish two kinds of AI tools. One kind of tool is trained on a
-collection of examples, such as job applications, with designated correct
-responses provided for the examples. The training is intended to shape the tool
-so that its responses on the training examples approximates the designated
-responses, on the examples. The tool is then applied to new examples, and the
-hope is that it will respond appropriately to these. We’ll call these tools
-_example trained_, or ET.
+In the preceding definitions, we distinguish two kinds of AI tools. One kind of
+tool is trained on a collection of examples, such as job applications, with
+designated correct responses provided for the examples. The training is intended
+to shape the tool so that its responses on the training examples approximates
+the designated responses, on the examples. The tool is then applied to new
+examples, and the hope is that it will respond appropriately to these. We’ll
+call these tools _example trained_, or ET.
 
 A second kind of tool is exemplified by Large Language Models (LLMs). These
 systems are also trained, but not on specific examples of a particular task.
@@ -110,7 +110,7 @@ ability to consult data sources outside themselves. For example, they may do Web
 searches, or look information up in private data bases, for example, collections
 of information about clients, or about the policies of an organization.
 
-## Potential problems for people with disabilities
+## Potential problems for marginalized groups
 
 ### Problems with ET tools
 
@@ -118,26 +118,29 @@ These different kinds of tools present different kinds of problems, with
 different possible remedies. Let’s consider first ET tools, along with FB tools
 in which examples are used, either in fine tuning or in prompts. An obvious
 problem arises if the examples used in creating or shaping these tools don’t
-include examples that reflect the situations or needs of people with
-disabilities. We’ll call this the _representation_ problem. It’s clear that if
-people with disabilities and their needs aren’t represented in the shaping of a
-tool, it’s very possible that the tool will produce inappropriate responses.
+include examples that reflect the situations or needs of a diversity of people,
+especially those at risk of discrimination. We’ll call this the _representation_
+problem.  It’s clear that if members of marginalized groups and their
+circumstances aren’t represented in the shaping of a tool, there's a real risk
+that the tool will produce inappropriate responses.
 
 However, even if representation is achieved, ET tools can be problematic for
-people with disabilities. Commonly, ET tools work by creating a mathematical
-model of the examples on which they are trained. This model can’t capture all
-the details of the examples, but forms a simplified, approximate picture of the
-examples. The training process pushes the model to do a good job on the average,
-not to give the correct response on every example. That means that the
-simplified model will be more accurate on examples whose features are common in
-the collection of examples, than on examples whose features are uncommon.
+people who are outliers in relevant respects. Commonly, ET tools work by
+creating a mathematical model of the examples on which they are trained. This
+model can’t capture all the details of the examples, but forms a simplified,
+approximate picture of the examples.  The training process pushes the model to
+do a good job on the average, not to give the correct response on every example.
+It follows that the simplified model will be more accurate on examples whose
+features are common in the collection of examples, than on examples whose
+features are uncommon.
 
-This works against people with disabilities, in many cases. Their situations are
-often different from those of most people, in many respects. For example, a
-person with a disability may have an unusual employment record. A model that
-does well in evaluating applicants with common employment records, and so looks
-good on the average, may do poorly for people with unusual records. We’ll call
-this the _averaging_ problem, associated with unusual examples, called outliers.
+This works against people who are already at risk of discrimination, in many
+cases.  Their situations are often different from the average or the norm, in
+relevant respects.  For example, a person with a disability may have an unusual
+employment record. A model that does well in evaluating applicants with common
+employment records, and so looks good on the average, may do poorly for people
+with unusual records.  We’ll call this the _averaging_ problem, associated with
+unusual examples, namely outliers.
 
 This problem is sometimes considered as the problem of _out of sample_ data. But
 that’s what we’re calling the _representation_ problem. The averaging problem
@@ -186,9 +189,9 @@ provides.
 Sometimes FB systems fabricate answers, for example by referring to sources of
 information that don’t actually exist.
 
-These problems obviously pose issues for all users, not just people with
-disabilities. But they may have special impact on people with cognitive
-limitations, who may be less able to detect and correct them.
+These problems obviously pose issues for all users, but they may have special
+impact on people with cognitive limitations, who may be less able to detect and
+correct them.
 
 ### Opacity
 
@@ -274,6 +277,13 @@ be risky. Rather than blocking an input, a guardrail could call for special
 processing, for example deliberately reframing a question, and comparing the
 responses obtained for different framings, before responding.
 
+In some applications, it may be possible to maintain a corpus of known, accurate
+responses that the system  can reproduce whenever substantively identical
+queries are made. This approach limits the number of novel responses that need
+to be created by FB systems. However, it is only effective if substantively
+identical prompts can be detected based on semantic similarity searches of the
+corpus.
+
 ### Testing
 
 Of course testing is one way to limit problems when systems are deployed.
@@ -350,9 +360,11 @@ appropriate response really is, including in unusual cases, not just anybody.
 The people who have the most stake in the correct operation of a system are
 often the people whose cases are being handled. There should be an easy feedback
 system in place so that users can speak up when they feel the system has not
-handled their case correctly.
+handled their case correctly. If legal rights or interests are at stake, 
+effective appeal and review procedures should be put in place to ensure adequate 
+human supervision.
 
-This feedback system should include clients having access to human assistance,
+The feedback system should include clients having access to human assistance,
 providing a way past the system that hasn’t understood their situation.
 Everybody knows how frustrating it can be when one can’t talk to a person, when
 some system isn’t doing what we need. This frustration won’t be any less when
