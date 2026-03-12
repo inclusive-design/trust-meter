@@ -1,6 +1,8 @@
-# Trust Meter Introduction
+---
+title: Trust meter Introduction
+---
 
---
+----
 
 Cover note: This is a stab at a high-level organization for the guidance the
 Trust Meter project is being asked for. Corrections, clarifications, and
@@ -22,7 +24,7 @@ problems possible at many junctures.
 
 Cheers, Clayton
 
---
+----
 
 ## Problem
 
@@ -61,6 +63,9 @@ about an individual due to salient group membership, such as having a specific
 gender, ethnicity, disability, or a combination thereof.
 
 ## Scope
+
+The Trust Meter is a non-normative Technical Specification that addresses statistical discrimination against data outliers and small minorities in mechanized statistical reasoning in AI decision tools.
+The Trust Meter Technical Specification is a framework that provides guidance for AI implementers to understand and anticipate potential harms such as when the scenario, group or individual about whom the decision is made is out-of-distribution relative to the training set the model is trained on, the AI’s decisions in this context may be unreliable.
 
 - The technical specification applies to machine‑learning‑based classification
   systems used in decision‑making.
