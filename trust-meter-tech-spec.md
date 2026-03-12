@@ -37,6 +37,9 @@ biased attitudes about people with disabilities.
 
 ## Scope
 
+The Trust Meter is a non-normative Technical Specification that addresses statistical discrimination against data outliers and small minorities in mechanized statistical reasoning in AI decision tools.
+The Trust Meter Technical Specification is a framework that provides guidance for AI implementers to understand and anticipate potential harms such as when the scenario, group or individual about whom the decision is made is out-of-distribution relative to the training set the model is trained on, the AI’s decisions in this context may be unreliable.
+
 - The technical specification applies to machine‑learning‑based classification
   systems used in decision‑making. - Generative and LLM‑based AI systems are out
   of scope unless they form a component of a classification pipeline that
