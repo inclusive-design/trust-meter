@@ -64,22 +64,30 @@ gender, ethnicity, disability, or a combination thereof.
 
 ## Scope
 
-The Trust Meter is a non-normative Technical Specification that addresses statistical discrimination against data outliers and small minorities in mechanized statistical reasoning in AI decision tools.
-The Trust Meter Technical Specification is a framework that provides guidance for AI implementers to understand and anticipate potential harms such as when the scenario, group or individual about whom the decision is made is out-of-distribution relative to the training set the model is trained on, the AI’s decisions in this context may be unreliable.
+The terms of reference define the scope of this report as follows.
+
+>The Trust Meter is a non-normative Technical Specification that addresses
+>statistical discrimination against data outliers and small minorities in
+>mechanized statistical reasoning in AI decision tools.
+>The Trust Meter Technical Specification is a framework that provides guidance
+>for AI implementers to understand and anticipate potential harms such as when
+>the scenario, group or individual about whom the decision is made is out-of-
+>distribution relative to the training set the model is trained on, the AI’s
+>decisions in this context may be unreliable.
+
+Having regard to the range of AI systems that can play a role in
+decision-making, the scope is here interpreted according to the additional
+points below.
 
 - The technical specification applies to machine‑learning‑based classification
   systems used in decision‑making.
-  - It also applies to systems providing information or advice likely to
-      influence decisions.
-- Generative and LLM‑based AI systems are out
-  of scope unless they form a component of a classification pipeline that
-  produces consequential decisions, or assemble information intended for use in
-  decision-making.
+- It also applies to systems providing information or advice intended to be
+  taken into account by a human agent as a step toward reaching a decisionp.
 - The guidance is non‑normative and intended to support implementers, operators,
   and reviewers.
-- outlines concepts, risks, and mitigation strategies that can inform future
+- It outlines concepts, risks, and mitigation strategies that can inform future
     standards.
-- provides foundational guidance to support adoption but does not prescribe
+- This report provides foundational guidance to support adoption but does not prescribe
     conformance requirements
 
 ## Statistical Discrimination
