@@ -51,18 +51,6 @@ The Trust Meter Technical Specification is a framework that provides guidance fo
   - provides foundational guidance to support adoption but does not prescribe
     conformance requirements
 
-## Statistical Discrimination
-
-Mechanisms of statistical discrimination include:
-
-- The technical specification applies to machine‑learning‑based classification
-  systems used in decision‑making.
-- Generative and LLM‑based AI systems are out of scope unless they form a
-  component of a classification pipeline that produces consequential decisions.
-- The guidance is non‑normative and intended to support implementers, operators,
-  and reviewers.
-
-
 ## Definitions
 
 ### Example Trained – “ET”
