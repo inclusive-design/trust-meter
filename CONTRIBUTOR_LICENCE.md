@@ -1,0 +1,24 @@
+# Contributor Licence
+
+## Asssignment of copyright
+
+In this legal notice, a "comment" refers to all written or orally provided
+information, including all suggestions, that a user or a member of the technical
+committee provides to the IDRC in relation to a specification and/or a draft
+specification. By providing a comment to the IDRC in relation to a specifcation
+and/or draft specification, the commenter grants to the IDRC a non-exclusive,
+royalty-free, perpetual, worldwide, and irrevocable licence to use, translate,
+reproduce, disclose, distribute, publish, modify, authorize to reproduce,
+communicate to the public by telecommunication, record, perform, or sublicense
+the comment, in whole or in part and in any form or medium, for revising the
+specification and/or draft specification, and/or for non-commercial purposes. By
+providing the comment, the commenter being the sole owner of the copyright or
+having the authority to license the copyright on behalf of their employer,
+confirms their ability to confer the licence and the commenter waives all
+associated moral rights, including, without limitation, all rights of
+attribution in respect of the comment. Where the provider of the comment is not
+the comment's author, the provider confirms that a waiver of moral rights by the
+author has been made in favour of the provider or the comment's copyright owner.
+At the time of providing a comment, the commenter must declare and provide a
+citation for any and all intellectual property within the comment that is owned
+by a third party.
