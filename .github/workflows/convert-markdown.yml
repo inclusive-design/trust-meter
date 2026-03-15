@@ -1,0 +1,32 @@
+name: Generate Documents
+
+on:
+  push:
+    branches: [main, draft]
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        formats: [html, epub, docx, pdf]
+        fileNames: [trust-meter-tech-spec]
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v5
+
+      - name: Convert "${{ matrix.fileNames }}.md" to ${{ matrix.formats }}
+        uses: docker://pandoc/latex:3.9
+        with:
+          args: >-
+            --standalone
+            -f markdown
+            -t ${{ matrix.formats }}
+            -o "${{ matrix.fileNames }}.${{ matrix.formats }}"
+            "./${{ matrix.fileNames }}.md"
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: ${{ matrix.formats }}
+          path: "${{ matrix.fileNames }}.${{ matrix.formats }}"
