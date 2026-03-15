@@ -5,7 +5,7 @@
 Cover note: This is a stab at a high-level organization for the guidance the
 Trust Meter project is being asked for. Corrections, clarifications, and
 elaborations are appropriate throughout-- this is intended only as a starting
-point. I’ve marked with ## one place where some more specifics are especially
+point. I’ve marked with >> one place where some more specifics are especially
 needed, but no doubt there are many others.
 
 Something not indicated here is where we should insert examples. There might be
@@ -285,10 +285,10 @@ Of course testing is one way to limit problems when systems are deployed.
 Testing for AI tools differs from testing of conventional software, however, in
 consequential ways. For conventional software there is a tightly specified space
 of permissible inputs, and for each input there is a specified correct output.
-For ETEB systems something like this situation may still hold, at least in
+For ET systems something like this situation may still hold, at least in
 simple cases. Inputs to the system might be limited to a specified format, and
 in simple cases it may be possible to work out exactly what the correct response
-would be. But often, even for ETEB systems, it may not be clear what response is
+would be. But often, even for ET systems, it may not be clear what response is
 correct, if an input instantiates a new constellation of attributes.
 
 For FB systems the situation is usually much worse. Part of the value of FB
@@ -312,14 +312,14 @@ earlier, their behaviour is produced by the interactions of virtually countless
 numerical parameters. There’s no way to enumerate the ways these should work.
 
 There’s a parallel here with the testing of human employees. We take it for
-granted that there is no way to be certain that a human help line worker will
+granted that there is no way to be certain that a human help-line worker will
 answer all questions correctly. Our millennia-long experience of working with
 humans provides us with some heuristics for assessing whether someone is likely
 to be reliable, though. Do they seem conscientious? Are they good on details? We
 live with the residual uncertainty. So far we lack any comparable grasp of how
 to work with FB systems.
 
-The situation is a bit better for simple ETEB systems. Some of these map data
+The situation is a bit better for simple ET systems. Some of these map data
 into a geometric space, and testing can explore how the system behaves in
 different regions of this space. However, even if a system looks good viewed in
 this way, the averaging problem means we can’t be sure it will work well for
@@ -372,8 +372,8 @@ improve the system, so that similar cases are handled correctly in future. As
 discussed above, however, this isn’t so easy. One can’t just patch the AI system
 as one can for fixing bugs in conventional software.
 
-For ET systems ##can someone look in the literature for how one can improve a
-classifier system?##
+For ET systems >>can someone look in the literature for how one can improve a
+classifier system?<<
 
 For an FB system with lookup, one could give the system the ability to look in a
 database of past cases, when handling a new case. When testing, or user
