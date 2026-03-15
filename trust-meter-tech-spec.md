@@ -26,29 +26,68 @@ Cheers, Clayton
 
 ----
 
+## Problem
+
+In statistics, an outlier is "an observation that lies an abnormal distance from
+other values in a random sample from a population".[^1] Membership in one or
+more social groups that are subject to systemic discrimination can result in a
+person's being an outlier in information  provided to an artificial intelligence
+(AI) system. This outlier status is due not merely to the fact of group
+membership.  Rather, it should be understood as arising from the many respects
+in which the circumstances, history and life experiences of such a group members
+can differ from those of larger populations. If the AI system fails to respond
+appropriately to the individual's specific  situation as reflected in the data
+presented to it, there is a risk of amplifying or further perpetuating
+discrimination.
+
+The risk is greatest if the system is used directly or indirectly to make
+decisions affecting the person's human rights or other legal interests.  When
+differences of gender, race, ethnicity, socio-economic position, or disability,
+for example, become salient to the operation of AI systems due to the
+under-representation or misrepreentation of outliers in data, there thus emerges
+a heightened risk of discriminatory decisions. Established practices of social
+marginalization are reinforceed, contrary to moral obligations and human rights
+standards. 
+
+[^1]: NIST/SEMATECH e-Handbook of Statistical Methods, [section
+7.1.6](https://www.itl.nist.gov/div898/handbook/prc/section1/prc16.htm).
+
 ## Purpose
 
-The purpose of this note is to outline some of the potential problems for people
-with disabilities and those who support them posed by AI tools, and approaches
-to mitigating these problems. The focus is on problems that arise from people
-with disabilities being different, or represented as being different, from other
-people, rather than on the problem of bias, that arises when AI tools may embed
-biased attitudes about people with disabilities.
+The purpose of this note is to outline some of the potential problems for
+members of marginalized social groups posed by AI tools, and approaches to
+mitigating these problems. The focus is on problems that arise from a person's
+being different, or represented as being different, from other people, rather
+than on the problem of bias that arises when AI tools may embed biased attitudes
+about an individual due to salient group membership, such as having a specific
+gender, ethnicity, disability, or a combination thereof.
 
 ## Scope
 
-The Trust Meter is a non-normative Technical Specification that addresses statistical discrimination against data outliers and small minorities in mechanized statistical reasoning in AI decision tools.
-The Trust Meter Technical Specification is a framework that provides guidance for AI implementers to understand and anticipate potential harms such as when the scenario, group or individual about whom the decision is made is out-of-distribution relative to the training set the model is trained on, the AI’s decisions in this context may be unreliable.
+The terms of reference define the scope of this report as follows.
+
+>The Trust Meter is a non-normative Technical Specification that addresses
+>statistical discrimination against data outliers and small minorities in
+>mechanized statistical reasoning in AI decision tools.
+>The Trust Meter Technical Specification is a framework that provides guidance
+>for AI implementers to understand and anticipate potential harms such as when
+>the scenario, group or individual about whom the decision is made is out-of-
+>distribution relative to the training set the model is trained on, the AI’s
+>decisions in this context may be unreliable.
+
+Having regard to the range of AI systems that can play a role in
+decision-making, the scope is here interpreted according to the additional
+points below.
 
 - The technical specification applies to machine‑learning‑based classification
-  systems used in decision‑making. - Generative and LLM‑based AI systems are out
-  of scope unless they form a component of a classification pipeline that
-  produces consequential decisions.
+  systems used in decision‑making.
+- It also applies to systems providing information or advice intended to be
+  taken into account by a human agent as a step toward reaching a decisionp.
 - The guidance is non‑normative and intended to support implementers, operators,
   and reviewers.
-  - outlines concepts, risks, and mitigation strategies that can inform future
+- It outlines concepts, risks, and mitigation strategies that can inform future
     standards.
-  - provides foundational guidance to support adoption but does not prescribe
+- This report provides foundational guidance to support adoption but does not prescribe
     conformance requirements
 
 ## Statistical Discrimination
