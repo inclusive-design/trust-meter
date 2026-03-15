@@ -7,7 +7,7 @@ title: Trust meter Introduction
 Cover note: This is a stab at a high-level organization for the guidance the
 Trust Meter project is being asked for. Corrections, clarifications, and
 elaborations are appropriate throughout-- this is intended only as a starting
-point. I’ve marked with ## one place where some more specifics are especially
+point. I’ve marked with >> one place where some more specifics are especially
 needed, but no doubt there are many others.
 
 Something not indicated here is where we should insert examples. There might be
@@ -105,13 +105,13 @@ Language Model (LLM).
 
 ## Kinds of AI tools.
 
-We distinguish two kinds of AI tools. One kind of tool is trained on a
-collection of examples, such as job applications, with designated correct
-responses provided for the examples. The training is intended to shape the tool
-so that its responses on the training examples approximates the designated
-responses, on the examples. The tool is then applied to new examples, and the
-hope is that it will respond appropriately to these. We’ll call these tools
-_example trained_, or ET.
+In the preceding definitions, we distinguish two kinds of AI tools. One kind of
+tool is trained on a collection of examples, such as job applications, with
+designated correct responses provided for the examples. The training is intended
+to shape the tool so that its responses on the training examples approximates
+the designated responses, on the examples. The tool is then applied to new
+examples, and the hope is that it will respond appropriately to these. We’ll
+call these tools _example trained_, or ET.
 
 A second kind of tool is exemplified by Large Language Models (LLMs). These
 systems are also trained, but not on specific examples of a particular task.
@@ -137,7 +137,7 @@ ability to consult data sources outside themselves. For example, they may do Web
 searches, or look information up in private data bases, for example, collections
 of information about clients, or about the policies of an organization.
 
-## Potential problems for people with disabilities
+## Potential problems for marginalized groups
 
 ### Problems with ET tools
 
@@ -145,26 +145,29 @@ These different kinds of tools present different kinds of problems, with
 different possible remedies. Let’s consider first ET tools, along with FB tools
 in which examples are used, either in fine tuning or in prompts. An obvious
 problem arises if the examples used in creating or shaping these tools don’t
-include examples that reflect the situations or needs of people with
-disabilities. We’ll call this the _representation_ problem. It’s clear that if
-people with disabilities and their needs aren’t represented in the shaping of a
-tool, it’s very possible that the tool will produce inappropriate responses.
+include examples that reflect the situations or needs of a diversity of people,
+especially those at risk of discrimination. We’ll call this the _representation_
+problem.  It’s clear that if members of marginalized groups and their
+circumstances aren’t represented in the shaping of a tool, there's a real risk
+that the tool will produce inappropriate responses.
 
 However, even if representation is achieved, ET tools can be problematic for
-people with disabilities. Commonly, ET tools work by creating a mathematical
-model of the examples on which they are trained. This model can’t capture all
-the details of the examples, but forms a simplified, approximate picture of the
-examples. The training process pushes the model to do a good job on the average,
-not to give the correct response on every example. That means that the
-simplified model will be more accurate on examples whose features are common in
-the collection of examples, than on examples whose features are uncommon.
+people who are outliers in relevant respects. Commonly, ET tools work by
+creating a mathematical model of the examples on which they are trained. This
+model can’t capture all the details of the examples, but forms a simplified,
+approximate picture of the examples.  The training process pushes the model to
+do a good job on the average, not to give the correct response on every example.
+It follows that the simplified model will be more accurate on examples whose
+features are common in the collection of examples, than on examples whose
+features are uncommon.
 
-This works against people with disabilities, in many cases. Their situations are
-often different from those of most people, in many respects. For example, a
-person with a disability may have an unusual employment record. A model that
-does well in evaluating applicants with common employment records, and so looks
-good on the average, may do poorly for people with unusual records. We’ll call
-this the _averaging_ problem, associated with unusual examples, called outliers.
+This works against people who are already at risk of discrimination, in many
+cases.  Their situations are often different from the average or the norm, in
+relevant respects.  For example, a person with a disability may have an unusual
+employment record. A model that does well in evaluating applicants with common
+employment records, and so looks good on the average, may do poorly for people
+with unusual records.  We’ll call this the _averaging_ problem, associated with
+unusual examples, namely outliers.
 
 This problem is sometimes considered as the problem of _out of sample_ data. But
 that’s what we’re calling the _representation_ problem. The averaging problem
@@ -213,9 +216,9 @@ provides.
 Sometimes FB systems fabricate answers, for example by referring to sources of
 information that don’t actually exist.
 
-These problems obviously pose issues for all users, not just people with
-disabilities. But they may have special impact on people with cognitive
-limitations, who may be less able to detect and correct them.
+These problems obviously pose issues for all users, but they may have special
+impact on people with cognitive limitations, who may be less able to detect and
+correct them.
 
 ### Opacity
 
@@ -301,16 +304,23 @@ be risky. Rather than blocking an input, a guardrail could call for special
 processing, for example deliberately reframing a question, and comparing the
 responses obtained for different framings, before responding.
 
+In some applications, it may be possible to maintain a corpus of known, accurate
+responses that the system  can reproduce whenever substantively identical
+queries are made. This approach limits the number of novel responses that need
+to be created by FB systems. However, it is only effective if substantively
+identical prompts can be detected based on semantic similarity searches of the
+corpus.
+
 ### Testing
 
 Of course testing is one way to limit problems when systems are deployed.
 Testing for AI tools differs from testing of conventional software, however, in
 consequential ways. For conventional software there is a tightly specified space
 of permissible inputs, and for each input there is a specified correct output.
-For ETEB systems something like this situation may still hold, at least in
+For ET systems something like this situation may still hold, at least in
 simple cases. Inputs to the system might be limited to a specified format, and
 in simple cases it may be possible to work out exactly what the correct response
-would be. But often, even for ETEB systems, it may not be clear what response is
+would be. But often, even for ET systems, it may not be clear what response is
 correct, if an input instantiates a new constellation of attributes.
 
 For FB systems the situation is usually much worse. Part of the value of FB
@@ -334,14 +344,14 @@ earlier, their behaviour is produced by the interactions of virtually countless
 numerical parameters. There’s no way to enumerate the ways these should work.
 
 There’s a parallel here with the testing of human employees. We take it for
-granted that there is no way to be certain that a human help line worker will
+granted that there is no way to be certain that a human help-line worker will
 answer all questions correctly. Our millennia-long experience of working with
 humans provides us with some heuristics for assessing whether someone is likely
 to be reliable, though. Do they seem conscientious? Are they good on details? We
 live with the residual uncertainty. So far we lack any comparable grasp of how
 to work with FB systems.
 
-The situation is a bit better for simple ETEB systems. Some of these map data
+The situation is a bit better for simple ET systems. Some of these map data
 into a geometric space, and testing can explore how the system behaves in
 different regions of this space. However, even if a system looks good viewed in
 this way, the averaging problem means we can’t be sure it will work well for
@@ -377,9 +387,11 @@ appropriate response really is, including in unusual cases, not just anybody.
 The people who have the most stake in the correct operation of a system are
 often the people whose cases are being handled. There should be an easy feedback
 system in place so that users can speak up when they feel the system has not
-handled their case correctly.
+handled their case correctly. If legal rights or interests are at stake, 
+effective appeal and review procedures should be put in place to ensure adequate 
+human supervision.
 
-This feedback system should include clients having access to human assistance,
+The feedback system should include clients having access to human assistance,
 providing a way past the system that hasn’t understood their situation.
 Everybody knows how frustrating it can be when one can’t talk to a person, when
 some system isn’t doing what we need. This frustration won’t be any less when
@@ -392,8 +404,8 @@ improve the system, so that similar cases are handled correctly in future. As
 discussed above, however, this isn’t so easy. One can’t just patch the AI system
 as one can for fixing bugs in conventional software.
 
-For ET systems ##can someone look in the literature for how one can improve a
-classifier system?##
+For ET systems >>can someone look in the literature for how one can improve a
+classifier system?<<
 
 For an FB system with lookup, one could give the system the ability to look in a
 database of past cases, when handling a new case. When testing, or user
