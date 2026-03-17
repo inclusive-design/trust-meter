@@ -1,5 +1,8 @@
 ---
 title: Trust meter Introduction
+author:
+    - Clayton H. Lewis
+    - Jason J.G. White
 ---
 
 ----
@@ -431,6 +434,7 @@ called for.  These same problems beset human-provided services, too. Can we
 harness AI, with its flexibility, and ability to process vast amounts of
 information, to do better?
 
+## Copyright and License
 
-
+This publication is copyright 2026 by OCAD University, and distributed under the terms of the [Creative Commons Attribution ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
