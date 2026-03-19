@@ -140,7 +140,7 @@ of information about clients, or about the policies of an organization.
 ## Statistical Discrimination
 
 Wehn an AI system with a role in decision-making exhibits bias against 
-individuals due to their membership of marginalized groups, it  contributes to 
+individuals due to presumed, often stereotyped, characteristics of marginalized goups to which they belong, it  contributes to 
 _statistical discrimination_. This type of discrimination is often both morally 
 and legally problematic. It can occur under conditions in which a person's group 
 identity is explicitly disclosed to an AI tool. However, it can also arise in 
