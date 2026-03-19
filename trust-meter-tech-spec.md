@@ -137,6 +137,30 @@ ability to consult data sources outside themselves. For example, they may do Web
 searches, or look information up in private data bases, for example, collections
 of information about clients, or about the policies of an organization.
 
+## Statistical Discrimination
+
+Wehn an AI system with a role in decision-making exhibits bias against 
+individuals due to their membership of marginalized groups, it  contributes to 
+_statistical discrimination_. This type of discrimination is often both morally 
+and legally problematic. It can occur under conditions in which a person's group 
+identity is explicitly disclosed to an AI tool. However, it can also arise in 
+cases in which the group identity is excluded from the data made available to 
+the system, but nevertheless becomes salient to the decisions via proxy 
+variables. For example, if members of a certain ethnic minority are concentrated 
+in a segregated suburb, an ET system might "learn" to discriminate against 
+residents of this locality, which thus serves as proxy for the marginalized 
+ethnic identity.
+
+Outliers are particularly at risk of statistical discrimination, owing to the 
+under-representation of their diverse capabilities, needs and circumstances in 
+data on which a system is trained. Disability is a perspicuous example, in that 
+having a disability essentially amounts to being different from a societal norm, 
+and thus tending to be an outlier in ways that affect consequential decisions.
+
+Preventing and mitigating the misclassification or mistreatment of outliers in 
+AI tools can accordingly be understood as a strategy for reducing immoral and 
+unlawful forms of statistical discrimination
+
 ## Potential problems for marginalized groups
 
 ### Problems with ET tools
