@@ -139,7 +139,7 @@ of information about clients, or about the policies of an organization.
 
 ## Statistical Discrimination
 
-Wehn an AI system with a role in decision-making exhibits bias against
+When an AI system with a role in decision-making exhibits bias against
 individuals due to presumed, often stereotyped, characteristics of marginalized
 goups to which they belong, it  contributes to _statistical discrimination_.
 This type of discrimination is generally morally and legally problematic.
@@ -150,6 +150,12 @@ nevertheless becomes salient to the decisions via proxy variables. For example,
 if members of a certain ethnic minority are concentrated in a segregated
 suburb, an ET system might "learn" to discriminate against residents of this
 locality, which thus serves as proxy for the marginalized ethnic identity.
+
+Moreover, even if proxy variables are not at issue, data about members of 
+marginalized groups  can readily be different from the typical or average cases 
+on which AI systems perform relatively well. For example, a group member may 
+have a lower socio-economic status than average, or a frequently interrupted 
+employment history, which increases the risk of misclassification.
 
 However statistical discrimination emerges in the operation of an AI tool, the 
 effect is to automate and reinforce existing prejudices, stereotypes, and 
