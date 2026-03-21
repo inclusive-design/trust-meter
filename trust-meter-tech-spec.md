@@ -421,6 +421,64 @@ As with other aspects of these systems, these improvement processes need to be
 monitored and checked. For example, adding a case with its proper processing
 does not guarantee that the system will respond correctly to future cases.
 
+## Deciding Whether and What to Automate
+
+Using AI tools in decision-making carries an inherent risk of statistical 
+discrimination. People who are under-represented or misrepresented in training 
+data are less likely to be classified appropriately by ET systems than cases 
+resembling what is average or typical. FB systems are more complex. They are not 
+constrained by a set of examples of the decision to be made. They have also 
+demonstrated a limited capacity to generalize, for example by applying 
+analogical reasoning. This capability makes FB systems more flexible, and it may 
+enable them to respond appropriately to people and situations that are not well 
+represented in the training corpus. Nevertheless, the risk of discrimination for 
+those at the margins of society remains, and it persists despite implementation 
+of the risk reduction strategies identified in this report.
+
+This risk of discrimination should be weighed carefully in choosing whether AI 
+tools should play any role in making a given type of decision, and if so, what 
+this role should be. There is a moment during the development of an AI software 
+project at which the risks of harm should be evaluated and strategic choices 
+made about whether the work should proceed, with what objectives, and in what 
+social context.  By this stage, a research system or an exploratory prototype 
+may have already been produced.  Alternatively, the envisaged project may only 
+be a more or less well defined proposal. In either case, an evaluation of the 
+risksis warranted, taking into account the available mitigations.
+
+In determining what role an AI system should be given in decision-making, the 
+risk of statistical discrimination should be balanced against the risks of harm 
+associated with alternative, non-automated means of achieving the same purpose.  
+Sometimes, a choice is to be taken between making decisions entirely by human 
+effort, and introducing automation into the procedure. Since human 
+decision-makers (with or without the assistance of AI) may be biased against 
+atypical cases, a fully manual decision-making procedure also risks 
+discrimination. Training programs and diversity awareness initiatives can reduce 
+human prejudices. Administrative review and procedural fairness requirements can 
+identify and overcome some instances of discrimination by individual 
+decision-makers. Thus, there are difficult and uncertain choices to be made 
+about whether automation would improve the fairness of decision-making compared 
+with manual approaches, particularly with respect to members of marginalized 
+groups.  There are risks and mitigation strategies attached to both human and 
+partly or fully automated decision-making procedures. These factors need to be 
+assessed, so far as is practicable, in deciding what to automate, and if 
+automation is justified, what should be the role of AI systems.
+
+In other situations a proposed AI system may be intended as a new access path to 
+existing  information or systems. Such an AI system might sometimes fail, and it 
+could fail more often for less common user requests. Such behavior, considered 
+on its own, could be discriminatory. Here a comparison is in order between the 
+access users would actually get, with and without the AI system. An AI system 
+might provide superior access, even if imperfect. This suggests that good 
+information about the services provided by existing systems, including 
+especially for marginalized users, should be part of the decision making about 
+proposed AI systems.
+
+If AI systems are to be used, attention should also be given to building an 
+appropriate social context. This may entail, for example, ensuring that human 
+decision-makers whom a tool supports are suitably equipped to understand and 
+respond to its limitations, and to implement monitoring and mitigation 
+techniques.
+
 ## Conclusion
 
 AI systems have promise in allowing agencies to provide better service, within
