@@ -448,7 +448,7 @@ risksis warranted, taking into account the available mitigations.
 In determining what role an AI system should be given in decision-making, the 
 risk of statistical discrimination should be balanced against the risks of harm 
 associated with alternative, non-automated means of achieving the same purpose.  
-Typically, a choice is to be taken between making decisions entirely by human 
+Sometimes, a choice is to be taken between making decisions entirely by human 
 effort, and introducing automation into the procedure. Since human 
 decision-makers (with or without the assistance of AI) may be biased against 
 atypical cases, a fully manual decision-making procedure also risks 
@@ -462,6 +462,16 @@ groups.  There are risks and mitigation strategies attached to both human and
 partly or fully automated decision-making procedures. These factors need to be 
 assessed, so far as is practicable, in deciding what to automate, and if 
 automation is justified, what should be the role of AI systems.
+
+In other situations a proposed AI system may be intended as a new access path to 
+existing  information or systems. Such an AI system might sometimes fail, and it 
+could fail more often for less common user requests. Such behavior, considered 
+on its own, could be discriminatory. Here a comparison is in order between the 
+access users would actually get, with and without the AI system. An AI system 
+might provide superior access, even if imperfect. This suggests that good 
+information about the services provided by existing systems, including 
+especially for marginalized users, should be part of the decision making about 
+proposed AI systems.
 
 If AI systems are to be used, attention should also be given to building an 
 appropriate social context. This may entail, for example, ensuring that human 
