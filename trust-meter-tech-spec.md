@@ -434,6 +434,20 @@ called for.  These same problems beset human-provided services, too. Can we
 harness AI, with its flexibility, and ability to process vast amounts of
 information, to do better?
 
+## Acknowledgments
+
+We acknowledge with gratitude the following participants in this project.
+
+* Prithy Ahmed
+* Clayton H. Lewis
+*Cindy Li 
+* Justin Obara 
+* David Rokeby
+* Joseph Scheuhammer
+* Julia Stoyanovich
+* Jutta Treviranus 
+* Jason J.G. White
+
 ## Copyright and License
 
 This publication is copyright 2026 by OCAD University, and distributed under the terms of the [Creative Commons Attribution ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
