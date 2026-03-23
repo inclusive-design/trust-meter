@@ -438,15 +438,15 @@ information, to do better?
 
 We acknowledge with gratitude the following participants in this project.
 
-* Prithy Ahmed
-* Clayton H. Lewis
-*Cindy Li 
-* Justin Obara 
-* David Rokeby
-* Joseph Scheuhammer
-* Julia Stoyanovich
-* Jutta Treviranus 
-* Jason J.G. White
+* Prithy Ahmed, Standards Council of Canada
+* Clayton H. Lewis, University of Colorado Boulder
+*Cindy Li, OCAD University
+* Justin Obara, OCAD University
+* David Rokeby, University of Toronto
+* Joseph Scheuhammer, OCAD University
+* Julia Stoyanovich, New York University
+* Jutta Treviranus, OCAD University
+* Jason J.G. White, individual participant
 
 ## Copyright and License
 
