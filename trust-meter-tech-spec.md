@@ -443,7 +443,7 @@ made about whether the work should proceed, with what objectives, and in what
 social context.  By this stage, a research system or an exploratory prototype 
 may have already been produced.  Alternatively, the envisaged project may only 
 be a more or less well defined proposal. In either case, an evaluation of the 
-risksis warranted, taking into account the available mitigations.
+risks is warranted, taking into account the available mitigations.
 
 In determining what role an AI system should be given in decision-making, the 
 risk of statistical discrimination should be balanced against the risks of harm 
