@@ -18,6 +18,6 @@ Pandoc and GNU Make are required to build rendered versions using the included m
 
 If TeX is not installed and PDF output is not considered necessary, you can run `make -k` to continue processing the makefile despite the failure of the PDF target.
 
-## Copyright
-[Add license details and copyright information.]
+# Copyright
+The document maintained in this repository is copyright 2026 by OCAD University, and distributed under the terms of the [Creative Commons Attribution ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
