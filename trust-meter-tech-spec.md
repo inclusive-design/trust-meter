@@ -14,9 +14,10 @@ types of additional commentary are sought:
     they are relevant.
 * Strategies not discussed in this draft for reducing the risk of discrimination 
     associated with the use of AI systems directly or indirectly in 
-    decision-making.
+    decision-making. A specific need for additional mitigations is highlighted 
+    in the draft with a comment preceded by >>.
 * Examples or analyses indicating which of the strategies outlined in this draft 
-    have proven useful in mitigating risk in practice.
+  have proven useful in mitigating risk in practice.
 
 Comments may be submitted by any of the means below.
 
