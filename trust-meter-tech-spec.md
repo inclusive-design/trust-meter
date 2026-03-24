@@ -44,9 +44,9 @@ The risk is greatest if the system is used directly or indirectly to make
 decisions affecting the person's human rights or other legal interests.  When
 differences of gender, race, ethnicity, socio-economic position, or disability,
 for example, become salient to the operation of AI systems due to the
-under-representation or misrepreentation of outliers in data, there thus emerges
+under-representation or misrepresentation of outliers in data, there thus emerges
 a heightened risk of discriminatory decisions. Established practices of social
-marginalization are reinforceed, contrary to moral obligations and human rights
+marginalization are reinforced, contrary to moral obligations and human rights
 standards. 
 
 [^1]: NIST/SEMATECH e-Handbook of Statistical Methods, [section
@@ -82,7 +82,7 @@ points below.
 - The technical specification applies to machine‑learning‑based classification
   systems used in decision‑making.
 - It also applies to systems providing information or advice intended to be
-  taken into account by a human agent as a step toward reaching a decisionp.
+  taken into account by a human agent as a step toward reaching a decision.
 - The guidance is non‑normative and intended to support implementers, operators,
   and reviewers.
 - It outlines concepts, risks, and mitigation strategies that can inform future
