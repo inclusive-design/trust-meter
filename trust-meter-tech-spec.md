@@ -2,27 +2,28 @@
 title: Trust meter Introduction
 ---
 
-----
+## Cover Note {-}
 
-Cover note: This is a stab at a high-level organization for the guidance the
-Trust Meter project is being asked for. Corrections, clarifications, and
-elaborations are appropriate throughout-- this is intended only as a starting
-point. I’ve marked with >> one place where some more specifics are especially
-needed, but no doubt there are many others.
+This is a public review draft. Corrections, clarifications, and suggestions for 
+improvement throughout the document are welcome and appreciated. The following 
+types of additional commentary are sought:
 
-Something not indicated here is where we should insert examples. There might be
-of two kinds (1) examples of harms people with disabilities have experienced.
-There may not yet be many of these for AI systems, but with careful presentation
-we can likely use some from older systems. (2) it would be great to have
-examples of how some of these ideas are being addressed in systems we’re
-learning about. For example, the AI Answers system stores past answers, and they
-may envision using this as a way to correct bad information. It also illustrates
-the lookup idea, making that more concrete for readers. For that matter, it
-might be used to make another point, not in the draft: AI systems are likely to
-implement quite complex, multi-stage, and branched  information flows, with
-problems possible at many junctures.
+* Examples of harm that has resulted or may result from the application of AI 
+    systems, especially in cases of outliers. Harms demonstrated by earlier 
+    systems (not employing machine learning) are also of interest, in so far as 
+    they are relevant.
+* Strategies not discussed in this draft for reducing the risk of discrimination 
+    associated with the use of AI systems directly or indirectly in 
+    decision-making.
+* Examples or analyses indicating which of the strategies outlined in this draft 
+    have proven useful in mitigating risk in practice.
 
-Cheers, Clayton
+Comments may be submitted by any of the means below.
+
+* Opening issues on the [GitHub 
+    repository](https://github.com/inclusive-design/trust-meter/issues) for this 
+    project, preferably with one comment per issue.
+* Sending email to [address to be inserted]
 
 ----
 
