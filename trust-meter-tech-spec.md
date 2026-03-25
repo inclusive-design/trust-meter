@@ -187,13 +187,13 @@ respects, and are therefore more likely to receive unreliable results, even when
 data was present in the training set.
 
 Performance can also be **brittle:** small changes in input may produce unexpectedly
-different outputs. For example, Wang et al. found that seemingly equivalent medical
-questions often received different answers from generative AI systems. A special form of
-this is sycophancy, where the tool adjusts its answer to match what the user appears to
-want. These problems affect all users, but they may have special impact on people whose
-circumstances are already poorly captured by the model, since there is less basis for the
-tool to fall back on, and on people with cognitive limitations, who may be less able to
-detect and correct unreliable results.
+different outputs. For example, [Wang et al.](https://www.nature.com/articles/s41746-024-01029-4.pdf)
+found that seemingly equivalent medical questions often received different answers from
+generative AI systems. A special form of this is sycophancy, where the tool adjusts its
+answer to match what the user appears to want. These problems affect all users, but they
+may have special impact on people whose circumstances are already poorly captured by the
+model, since there is less basis for the tool to fall back on, and on people with
+cognitive limitations, who may be less able to detect and correct unreliable results.
 
 ### Loss of Context
 
