@@ -2,27 +2,29 @@
 title: Trust meter Introduction
 ---
 
-----
+## Cover Note {-}
 
-Cover note: This is a stab at a high-level organization for the guidance the
-Trust Meter project is being asked for. Corrections, clarifications, and
-elaborations are appropriate throughout-- this is intended only as a starting
-point. I’ve marked with >> one place where some more specifics are especially
-needed, but no doubt there are many others.
+This is a public review draft. Corrections, clarifications, and suggestions for
+improvement throughout the document are welcome and appreciated. The following
+types of additional commentary are sought:
 
-Something not indicated here is where we should insert examples. There might be
-of two kinds (1) examples of harms people with disabilities have experienced.
-There may not yet be many of these for AI systems, but with careful presentation
-we can likely use some from older systems. (2) it would be great to have
-examples of how some of these ideas are being addressed in systems we’re
-learning about. For example, the AI Answers system stores past answers, and they
-may envision using this as a way to correct bad information. It also illustrates
-the lookup idea, making that more concrete for readers. For that matter, it
-might be used to make another point, not in the draft: AI systems are likely to
-implement quite complex, multi-stage, and branched  information flows, with
-problems possible at many junctures.
+* Examples of harm that has resulted or may result from the application of AI
+    systems, especially in cases of outliers. Harms demonstrated by earlier
+    systems (not employing machine learning) are also of interest, in so far as
+    they are relevant.
+* Strategies not discussed in this draft for reducing the risk of discrimination
+    associated with the use of AI systems directly or indirectly in
+    decision-making. A specific need for additional mitigations is highlighted
+    in the draft with a comment preceded by >>.
+* Examples or analyses indicating which of the strategies outlined in this draft
+  have proven useful in mitigating risk in practice.
 
-Cheers, Clayton
+Comments may be submitted by any of the means below.
+
+* Opening issues on the [GitHub
+    repository](https://github.com/inclusive-design/trust-meter/issues) for this
+    project, preferably with one comment per issue.
+* Sending email to [vroberts@ocadu.ca](mailto:vroberts@ocadu.ca)
 
 ----
 
@@ -415,6 +417,64 @@ way.
 As with other aspects of these systems, these improvement processes need to be
 monitored and checked. For example, adding a case with its proper processing
 does not guarantee that the system will respond correctly to future cases.
+
+## Deciding Whether and What to Automate
+
+Using AI tools in decision-making carries an inherent risk of statistical
+discrimination. People who are under-represented or misrepresented in training
+data are less likely to be classified appropriately by ET systems than cases
+resembling what is average or typical. FB systems are more complex. They are not
+constrained by a set of examples of the decision to be made. They have also
+demonstrated a limited capacity to generalize, for example by applying
+analogical reasoning. This capability makes FB systems more flexible, and it may
+enable them to respond appropriately to people and situations that are not well
+represented in the training corpus. Nevertheless, the risk of discrimination for
+those at the margins of society remains, and it persists despite implementation
+of the risk reduction strategies identified in this report.
+
+This risk of discrimination should be weighed carefully in choosing whether AI
+tools should play any role in making a given type of decision, and if so, what
+this role should be. There is a moment during the development of an AI software
+project at which the risks of harm should be evaluated and strategic choices
+made about whether the work should proceed, with what objectives, and in what
+social context.  By this stage, a research system or an exploratory prototype
+may have already been produced.  Alternatively, the envisaged project may only
+be a more or less well defined proposal. In either case, an evaluation of the
+risks is warranted, taking into account the available mitigations.
+
+In determining what role an AI system should be given in decision-making, the
+risk of statistical discrimination should be balanced against the risks of harm
+associated with alternative, non-automated means of achieving the same purpose.
+Sometimes, a choice is to be taken between making decisions entirely by human
+effort, and introducing automation into the procedure. Since human
+decision-makers (with or without the assistance of AI) may be biased against
+atypical cases, a fully manual decision-making procedure also risks
+discrimination. Training programs and diversity awareness initiatives can reduce
+human prejudices. Administrative review and procedural fairness requirements can
+identify and overcome some instances of discrimination by individual
+decision-makers. Thus, there are difficult and uncertain choices to be made
+about whether automation would improve the fairness of decision-making compared
+with manual approaches, particularly with respect to members of marginalized
+groups. There are risks and mitigation strategies attached to both human and
+partly or fully automated decision-making procedures. These factors need to be
+assessed, so far as is practicable, in deciding what to automate, and if
+automation is justified, what should be the role of AI systems.
+
+In other situations a proposed AI system may be intended as a new access path to
+existing information or systems. Such an AI system might sometimes fail, and it
+could fail more often for less common user requests. Such behavior, considered
+on its own, could be discriminatory. Here a comparison is in order between the
+access users would actually get, with and without the AI system. An AI system
+might provide superior access, even if imperfect. This suggests that good
+information about the services provided by existing systems, including
+especially for marginalized users, should be part of the decision making about
+proposed AI systems.
+
+If AI systems are to be used, attention should also be given to building an
+appropriate social context. This may entail, for example, ensuring that human
+decision-makers whom a tool supports are suitably equipped to understand and
+respond to its limitations, and to implement monitoring and mitigation
+techniques.
 
 ## Conclusion
 
