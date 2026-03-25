@@ -47,7 +47,7 @@ for example, become salient to the operation of AI systems due to the
 under-representation or misrepresentation of outliers in data, there thus emerges
 a heightened risk of discriminatory decisions. Established practices of social
 marginalization are reinforced, contrary to moral obligations and human rights
-standards. 
+standards.
 
 [^1]: NIST/SEMATECH e-Handbook of Statistical Methods, [section
 7.1.6](https://www.itl.nist.gov/div898/handbook/prc/section1/prc16.htm).
@@ -90,52 +90,55 @@ points below.
 - This report provides foundational guidance to support adoption but does not prescribe
     conformance requirements
 
-## Definitions
+## Kinds of AI Tools
 
-### Example Trained – “ET”
+AI tools can be grouped along two dimensions: **what** they are designed to do, and
+**how** they produce results.
 
-The AI tool training data is examples with predefined correct responses.  A
-classification AI is an example of an ET tool.
+**Task-Specific AI** **tools** are designed and trained to perform one particular task
+or set of tasks.
 
-### Foundation Based – “FB”
+- _Supervised:_ The tool learns from examples where the correct answer has been
+  provided by a human. For example, a spam filter is trained on thousands of emails,
+  each labeled "spam" or "not spam."
+- _Unsupervised:_ The tool finds patterns or structure in data without being given
+  correct answers. For example, a customer segmentation tool groups shoppers by
+  purchasing behavior without being told in advance what the groups should be.
 
-The AI tool is trained but not using specific examples.  Instead, they are
-trained on vast amounts of text or media.  An example of an FB is a Large
-Language Model (LLM).
+**General-Purpose AI** **tools** can be applied to many different tasks across many
+domains.
 
-## Kinds of AI tools.
+- _Discriminative:_ The tool analyzes, classifies, or retrieves information without
+  producing new content. For example, a search engine ranks web pages by relevance to a
+  query, and a general-purpose embedding model can be used for search, classification,
+  or clustering across many domains.
+- _Generative:_ The tool produces new content such as text, images, or code. For example,
+  Large Language Models (LLMs) like ChatGPT can answer questions, summarize documents,
+  translate text, or write code, all based on instructions given as a prompt.
 
-In the preceding definitions, we distinguish two kinds of AI tools. One kind of
-tool is trained on a collection of examples, such as job applications, with
-designated correct responses provided for the examples. The training is intended
-to shape the tool so that its responses on the training examples approximates
-the designated responses, on the examples. The tool is then applied to new
-examples, and the hope is that it will respond appropriately to these. We’ll
-call these tools _example trained_, or ET.
+In practice, many tools combine elements of both categories. A general-purpose model is
+often **adapted** to a specific task through one of several mechanisms:
 
-A second kind of tool is exemplified by Large Language Models (LLMs). These
-systems are also trained, but not on specific examples of a particular task.
-Rather they are trained on vast amounts of text or media, with the task of
-predicting the sequence in which material occurs in the training corpus.
-Remarkably, this training has been shown to provide a foundation for an enormous
-range of specific tasks, even with no specific training on these. We’ll call
-these tools _foundation based_, or FB.
-
-Few tools are purely FB. Rather, many tools combine FB with subsequent example
-training that can be supplied in various ways. One way is to carry on a separate
-training phase, called _fine tuning_, in which an underlying FB system is
-adjusted to better approximate patterns of responding, as represented in
-examples used in the tuning process. Another way does not use training as such,
-but rather provides examples in a prefix applied to the prompts that are the
-inputs to the model when it is used. This second way exploits another remarkable
-capability of FB systems, that their responses can be effectively shaped by
-material included in the prompts.
-
-Some FB tools now have _lookup capabilities_. Because it is technically
-difficult to add new information to FB systems, it’s common to give them the
-ability to consult data sources outside themselves. For example, they may do Web
-searches, or look information up in private data bases, for example, collections
-of information about clients, or about the policies of an organization.
+- _Transfer learning:_ A general-purpose discriminative model, pre-trained to produce
+  useful representations of data, is adapted to perform a specific task using a
+  relatively small amount of task-specific training data. For instance, a model trained
+  to recognize general features in images might be adapted to detect specific
+  manufacturing defects on a factory production line. In deep learning, this is often
+  done by keeping the base model fixed and training a small additional layer on top of
+  it; in other settings, the model's parameters may be adjusted more broadly.
+- _Fine-tuning:_ A general-purpose generative model may be further trained on
+  task-specific examples to improve its performance in a particular domain. For instance,
+  a general-purpose LLM might be fine-tuned on legal documents to make it more useful for
+  legal research.
+- _In-context learning:_ Rather than additional training, examples or instructions may be
+  included directly in the prompt given to the model. The model uses these to guide its
+  response. This exploits a notable capability of general-purpose models: their behavior
+  can be shaped by the content of the input itself.
+- _Retrieval:_ Because it is difficult to add new information to a model after training,
+  many tools are given the ability to consult external data sources. For example, they
+  may search the web or look up information in private databases, such as client records
+  or organizational policies. This allows the tool to draw on current and specific
+  information that was not part of its training data.
 
 ## Potential problems for marginalized groups
 
@@ -204,12 +207,12 @@ framed in many different ways, and be answered appropriately. However, it can
 also happen that one input gets an appropriate response, and another, that seems
 as if it should be equivalent, gets a different response. For example, [Wang et
 al.](https://www.nature.com/articles/s41746-024-01029-4.pdf ) found that
-seemingly equivalent medical questions often received different answers from FB 
+seemingly equivalent medical questions often received different answers from FB
 systems.
 
 A special form of prompt sensitivity is sycophancy: FB systems will sometimes
 offer answers that the user may appear to want, based on the input the user
-provides. 
+provides.
 
 ### Hallucination
 
@@ -264,7 +267,7 @@ different a given case is from a collection of other cases. For ET systems, or
 for FB systems with additional examples used in shaping them, it would be
 reasonable to add a processing step in which such an assessment would be made
 for each new case. Cases that are determined to be quite different from the
-examples would be routed for special processing. 
+examples would be routed for special processing.
 
 ### Brittleness
 
@@ -387,8 +390,8 @@ appropriate response really is, including in unusual cases, not just anybody.
 The people who have the most stake in the correct operation of a system are
 often the people whose cases are being handled. There should be an easy feedback
 system in place so that users can speak up when they feel the system has not
-handled their case correctly. If legal rights or interests are at stake, 
-effective appeal and review procedures should be put in place to ensure adequate 
+handled their case correctly. If legal rights or interests are at stake,
+effective appeal and review procedures should be put in place to ensure adequate
 human supervision.
 
 The feedback system should include clients having access to human assistance,
