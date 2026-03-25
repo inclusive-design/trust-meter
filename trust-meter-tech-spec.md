@@ -440,7 +440,7 @@ We acknowledge with gratitude the following participants in this project.
 
 * Prithy Ahmed, Standards Council of Canada
 * Clayton H. Lewis, University of Colorado Boulder
-*Cindy Li, OCAD University
+* Cindy Li, OCAD University
 * Justin Obara, OCAD University
 * David Rokeby, University of Toronto
 * Joseph Scheuhammer, OCAD University
