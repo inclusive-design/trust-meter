@@ -29,7 +29,6 @@ Comments may be submitted by any of the means below.
 ----
 
 ## Problem
-this is stuff Clayton is adding as a test
 
 In statistics, an outlier is "an observation that lies an abnormal distance from
 other values in a random sample from a population".[^1] Membership in one or
@@ -143,6 +142,12 @@ often **adapted** to a specific task through one of several mechanisms:
   or organizational policies. This allows the tool to draw on current and specific
   information that was not part of its training data.
 
+  In one way or another, all of these tools are trained from examples. But the way the examples are used varies for different tools, and for different tools. Some tools are trained on a collection of examples that include desired outcomes. For example, a tool for evaluating job applications might be trained on a collection of examples, with specified evaluations provided. Common generative tools are not trained on examples from any specific domain, but on a vast quantity of miscellaneous data. For example, Large Language Models are trained to predict the next piece of text in sequence drawn from a huge corpus of text (and almost always by fine tuning on a variety of human conversations.)
+
+Even though a Large Language Model has not been trained in a specific domain, like job applications, it could still be used to answer questions in that domain. If given a prompt like "Given the following criteria, ..., evaluate the following job application on a scale from 1 to 10: ..." the model would provide a response.
+
+As we discuss below, some problems is using AI systems can be addressed by improving the collection of examples used in training. But someone using a Large Language Model usually has no control of those examples. They do have control of other examples they may use, however: those that are used in fine tuning, or that are included in prompts. For example, in the job application example just discussed, examples of applications, with the desired evaluation, could be included in the prompts.
+
 ## Potential Problems for Marginalized Groups
 
 Different kinds of AI tools present different kinds of problems, with different possible
@@ -189,7 +194,7 @@ are already at risk of discrimination are often different from the average in re
 respects, and are therefore more likely to receive unreliable results, even when their
 data was present in the training set.
 
-Performance can also be **brittle:** small changes in input may produce unexpectedly
+Performance can also be **brittle:**, especially for generative models: small changes in input may produce unexpectedly
 different outputs. For example, [Wang et al.](https://www.nature.com/articles/s41746-024-01029-4.pdf)
 found that seemingly equivalent medical questions often received different answers from
 generative AI systems. A special form of this is sycophancy, where the tool adjusts its
@@ -198,14 +203,11 @@ may have special impact on people whose circumstances are already poorly capture
 model, since there is less basis for the tool to fall back on, and on people with
 cognitive limitations, who may be less able to detect and correct unreliable results.
 
-### Loss of Context
+### Other Issues
 
-AI tools are shaped by the data and settings in which they were created. When they are
+**Generalization out of context.** AI tools are shaped by the data and settings in which they were created. When they are
 applied outside those boundaries, their reliability may degrade in ways that are difficult
-to predict.
-
-**Generalization out of context.** A tool may be applied in a setting, population, or
-domain that differs from the one it was trained or evaluated on. For example, a hiring
+to predict. For example, a hiring
 tool trained on data from one industry may perform poorly when used in another, or a
 model trained primarily on English-language text may produce unreliable results for other
 languages or cultural contexts. This affects both task-specific and general-purpose
@@ -214,22 +216,16 @@ to have been represented in the tool's original setting.
 
 **Fabrication.** Generative AI systems sometimes produce plausible-sounding but false
 information, for example by referring to sources that don't actually exist. This is
-sometimes called hallucination. The model lacks the context to distinguish what it knows
-from what it is inventing. This poses issues for all users, but may have special impact
+sometimes called hallucination.  This poses issues for all users, but may have special impact
 on people with cognitive limitations, who may be less able to detect and correct
 fabricated results.
+
+
 
 **Retrieval errors.** Many tools are given the ability to consult external data sources,
 such as the web or private databases, to compensate for the limits of what was included
 in training. But this introduces its own risks: the tool may frame its query incorrectly,
-retrieve irrelevant or outdated information, or misinterpret what it finds. The tool is
-operating in a context (i.e., the external data source) that it was not trained on
-directly, and its reliability in navigating that context is not guaranteed.
-
-In each of these cases, the common thread is that the tool is being asked to perform
-beyond the boundaries of its training or design. People whose circumstances are unusual
-or underrepresented are more likely to fall outside those boundaries, and are therefore
-more likely to be affected.
+retrieve irrelevant or outdated information, or misinterpret what it finds. 
 
 ### Opacity
 
@@ -266,7 +262,7 @@ examples would be routed for special processing.
 
 ### Brittleness
 
-As far as we know, this is an unsolved problem for people deploying FB tools.
+As far as we know, this is an unsolved problem for people deploying generative tools.
 Available tools are getting better, over time, but the improvements seem to
 result from the ever-increasing size of the models that large development
 organization are creating. Deployers may just have to wait for these problems to
@@ -283,12 +279,12 @@ that would be.
 ### Hallucination
 
 As for brittleness, this problem is shrinking over time, but it’s still there.
-In some cases, lookup facilities can be used to limit hallucinations. If an FB
+In some cases, lookup facilities can be used to limit hallucinations. If a
 system is limited to providing answers that are quoted from a database,
 hallucinations are less likely. This can be approached by adding directives to
 prompts, but one can’t be sure that is completely effective. Another approach
 would be to implement a data flow in which responses come directly from a
-trusted data source, once identified by an FB system. Here the FB could not
+trusted data source, once identified by an AI system. Here the AI could not
 fabricate responses, since it does not respond directly to users.
 
 Another approach to hallucination, that can also be applied for brittleness, is
@@ -305,7 +301,7 @@ responses obtained for different framings, before responding.
 In some applications, it may be possible to maintain a corpus of known, accurate
 responses that the system  can reproduce whenever substantively identical
 queries are made. This approach limits the number of novel responses that need
-to be created by FB systems. However, it is only effective if substantively
+to be created by AI systems. However, it is only effective if substantively
 identical prompts can be detected based on semantic similarity searches of the
 corpus.
 
@@ -315,19 +311,19 @@ Of course testing is one way to limit problems when systems are deployed.
 Testing for AI tools differs from testing of conventional software, however, in
 consequential ways. For conventional software there is a tightly specified space
 of permissible inputs, and for each input there is a specified correct output.
-For ET systems something like this situation may still hold, at least in
+For some application-specific systems something like this situation may still hold, at least in
 simple cases. Inputs to the system might be limited to a specified format, and
 in simple cases it may be possible to work out exactly what the correct response
-would be. But often, even for ET systems, it may not be clear what response is
+would be. But often, even for such systems, it may not be clear what response is
 correct, if an input instantiates a new constellation of attributes.
 
-For FB systems the situation is usually much worse. Part of the value of FB
+For generative systems like LLMs the situation is usually much worse. Part of the value of these
 systems is their flexibility: there’s no specification of exactly how inputs
 must be expressed. Further, a correct response need not be framed in some
-particular way. Determining that the output produced for a given input is
+particular way. Determining that the output produced for a given input is correct is
 complex. As a result, while conventional software testing can be extensively
 automated,  testing of FB tools can usually only be automated by using FB tools
-themselves. This kind of testing that lead to increased confidence that the
+themselves. This kind of testing can lead to increased confidence that the
 system works properly, but it can’t give the kind of certainty that conventional
 software testing often provides.
 
@@ -337,7 +333,7 @@ every piece of code in the system must be executed. This doesn’t ensure that a
 possible paths through the code have been tested, but at least each part of the
 system has been found to work, at least in some situation.
 
-There is no comparable notion of test coverage for FB systems. As mentioned
+There is no comparable notion of test coverage for generative systems. As mentioned
 earlier, their behaviour is produced by the interactions of virtually countless
 numerical parameters. There’s no way to enumerate the ways these should work.
 
@@ -347,9 +343,9 @@ answer all questions correctly. Our millennia-long experience of working with
 humans provides us with some heuristics for assessing whether someone is likely
 to be reliable, though. Do they seem conscientious? Are they good on details? We
 live with the residual uncertainty. So far we lack any comparable grasp of how
-to work with FB systems.
+to work with generative systems.
 
-The situation is a bit better for simple ET systems. Some of these map data
+The situation is a bit better for simple application-specific systems. Some of these map data
 into a geometric space, and testing can explore how the system behaves in
 different regions of this space. However, even if a system looks good viewed in
 this way, the averaging problem means we can’t be sure it will work well for
@@ -361,9 +357,7 @@ of such systems. This is another parallel with working with humans: a prudent
 manager will provide some oversight over what their human employees are doing.
 
 It would be especially useful to provide human oversight on the handling of
-unusual cases. As we’ve seen, these are especially likely to be mishandled,
-especially for ET systems. Even for FB systems, since most of them have a good
-deal of example-based shaping, having a human check the results of cases that
+unusual cases. As we’ve seen, these are especially likely to be mishandled by AI systems. Even for systems trained on specific examples, having a human check the results of cases that
 aren’t much like the examples would be a good idea.
 
 There are some practical problems to be confronted in this prudent scheme.
@@ -402,16 +396,16 @@ improve the system, so that similar cases are handled correctly in future. As
 discussed above, however, this isn’t so easy. One can’t just patch the AI system
 as one can for fixing bugs in conventional software.
 
-For ET systems >>can someone look in the literature for how one can improve a
+For application-specific systems >>can someone look in the literature for how one can improve a
 classifier system?<<
 
-For an FB system with lookup, one could give the system the ability to look in a
+For a generative system with lookup, one could give the system the ability to look in a
 database of past cases, when handling a new case. When testing, or user
 experience, reveals problems, descriptions of these cases, and how they should
 have been handled, would be added to this database.
 
 Another approach that could be tried would be adding mishandled cases, with the
-proper handling described, to future prompts. Modern FB systems support very
+proper handling described, to future prompts. Modern generative systems support very
 long prompts, so a good deal of corrective information could be added in this
 way.
 
@@ -423,11 +417,11 @@ does not guarantee that the system will respond correctly to future cases.
 
 Using AI tools in decision-making carries an inherent risk of statistical
 discrimination. People who are under-represented or misrepresented in training
-data are less likely to be classified appropriately by ET systems than cases
-resembling what is average or typical. FB systems are more complex. They are not
+data are less likely to be classified appropriately by AI systems than cases
+resembling what is average or typical. Generative systems are especially complex. They are not
 constrained by a set of examples of the decision to be made. They have also
-demonstrated a limited capacity to generalize, for example by applying
-analogical reasoning. This capability makes FB systems more flexible, and it may
+demonstrated the capacity to generalize, for example by applying
+analogical reasoning. This capability makes generative systems more flexible, and it may
 enable them to respond appropriately to people and situations that are not well
 represented in the training corpus. Nevertheless, the risk of discrimination for
 those at the margins of society remains, and it persists despite implementation
