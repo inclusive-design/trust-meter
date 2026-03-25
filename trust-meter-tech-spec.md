@@ -458,7 +458,7 @@ identify and overcome some instances of discrimination by individual
 decision-makers. Thus, there are difficult and uncertain choices to be made 
 about whether automation would improve the fairness of decision-making compared 
 with manual approaches, particularly with respect to members of marginalized 
-groups.  There are risks and mitigation strategies attached to both human and 
+groups. There are risks and mitigation strategies attached to both human and 
 partly or fully automated decision-making procedures. These factors need to be 
 assessed, so far as is practicable, in deciding what to automate, and if 
 automation is justified, what should be the role of AI systems.
