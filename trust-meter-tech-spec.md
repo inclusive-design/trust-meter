@@ -24,7 +24,7 @@ Comments may be submitted by any of the means below.
 * Opening issues on the [GitHub 
     repository](https://github.com/inclusive-design/trust-meter/issues) for this 
     project, preferably with one comment per issue.
-* Sending email to [vroberts@ocadu.ca](mailto:vroberts@ocadu.ca)
+* Sending email to Vera Roberts <[vroberts@ocadu.ca](mailto:vroberts@ocadu.ca)>
 
 ----
 
