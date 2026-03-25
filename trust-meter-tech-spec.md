@@ -464,7 +464,7 @@ assessed, so far as is practicable, in deciding what to automate, and if
 automation is justified, what should be the role of AI systems.
 
 In other situations a proposed AI system may be intended as a new access path to 
-existing  information or systems. Such an AI system might sometimes fail, and it 
+existing information or systems. Such an AI system might sometimes fail, and it 
 could fail more often for less common user requests. Such behavior, considered 
 on its own, could be discriminatory. Here a comparison is in order between the 
 access users would actually get, with and without the AI system. An AI system 
