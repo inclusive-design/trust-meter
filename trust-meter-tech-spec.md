@@ -140,113 +140,105 @@ often **adapted** to a specific task through one of several mechanisms:
   or organizational policies. This allows the tool to draw on current and specific
   information that was not part of its training data.
 
-## Potential problems for marginalized groups
+## Potential Problems for Marginalized Groups
 
-### Problems with ET tools
+Different kinds of AI tools present different kinds of problems, with different possible
+remedies. Below, we organize the discussion by the problem itself, and note which kinds
+of tools are most susceptible.
 
-These different kinds of tools present different kinds of problems, with
-different possible remedies. Let’s consider first ET tools, along with FB tools
-in which examples are used, either in fine tuning or in prompts. An obvious
-problem arises if the examples used in creating or shaping these tools don’t
-include examples that reflect the situations or needs of a diversity of people,
-especially those at risk of discrimination. We’ll call this the _representation_
-problem.  It’s clear that if members of marginalized groups and their
-circumstances aren’t represented in the shaping of a tool, there's a real risk
-that the tool will produce inappropriate responses.
+### Representation Problems
 
-However, even if representation is achieved, ET tools can be problematic for
-people who are outliers in relevant respects. Commonly, ET tools work by
-creating a mathematical model of the examples on which they are trained. This
-model can’t capture all the details of the examples, but forms a simplified,
-approximate picture of the examples.  The training process pushes the model to
-do a good job on the average, not to give the correct response on every example.
-It follows that the simplified model will be more accurate on examples whose
-features are common in the collection of examples, than on examples whose
-features are uncommon.
+An obvious problem arises due to **under representation**: if the examples used in
+creating or shaping a tool don't include examples that reflect the situations or needs of
+a diversity of people, especially those at risk of discrimination. It's clear that if
+members of marginalized groups and their circumstances aren't represented in the shaping
+of a tool, there's a real risk that the tool will produce inappropriate responses. This
+affects any tool that learns from data, whether task-specific or general-purpose, and
+whether the examples are used in initial training, fine-tuning, or prompts.
 
-This works against people who are already at risk of discrimination, in many
-cases.  Their situations are often different from the average or the norm, in
-relevant respects.  For example, a person with a disability may have an unusual
-employment record. A model that does well in evaluating applicants with common
-employment records, and so looks good on the average, may do poorly for people
-with unusual records.  We’ll call this the _averaging_ problem, associated with
-unusual examples, namely outliers.
+A related but distinct problem is **misrepresentation**: the training data may include
+members of a group, but in proportions or contexts that don't reflect reality. For
+example, if a hiring tool is trained on historical data in which women were
+underrepresented in senior roles, the tool may learn to associate seniority with men, not
+because women are absent from the data, but because the data reflects past patterns of
+discrimination rather than actual qualifications. The group is present, but the picture
+the model forms of it is distorted.
 
-This problem is sometimes considered as the problem of _out of sample_ data. But
-that’s what we’re calling the _representation_ problem. The averaging problem
-can occur even for examples that are included in the training examples, that is,
-for cases that are in sample, not out of sample.
+An extreme case of misrepresentation arises for **outliers**: groups or individuals so
+rare in the training data that the model has too few examples to learn their patterns at
+all — not enough data to even compute meaningful statistics.
 
-In the literature, an outlier is often defined as an exemplar that is so
-different from the other examples in a population that it must represent a
-different population, or result from a different process, than the rest of the
-population. In experimental data, it’s not uncommon for outliers to be excluded
-from analysis, as reflecting some irrelevant failure of procedure.
+### Performance Problems
 
-In our situation, excluding outliers is obviously not appropriate. But
-identifying them can be a method of mitigating the averaging problem, as we’ll
-discuss.
+AI tools are typically evaluated using **aggregate performance metrics*:** a single
+number that summarizes how well the tool does across all examples. These metrics
+naturally reward doing well on common cases, since those contribute most to the overall
+score. A tool can appear to perform well on average while performing poorly for groups or
+individuals whose circumstances are uncommon. For example, a model that does well in
+evaluating applicants with common employment records, and so looks good on the average,
+may do poorly for people with unusual records, such as a person with a disability who has
+gaps in their employment history.
 
-## Problems with FB tools
+This is not simply a matter of rare errors. The training process itself pushes the model
+to form a simplified, approximate picture of the data, one that is more accurate for
+examples whose features are common than for those whose features are uncommon. People who
+are already at risk of discrimination are often different from the average in relevant
+respects, and are therefore more likely to receive unreliable results, even when their
+data was present in the training set.
 
-We consider here problems that aren’t traceable to a collection of examples that
-was used to train or shape the responses of a tool, but rather to the
-characteristics of FB tools. All of these problems are becoming less common as
-the technology advances, but all remain issues that tool creators need to
-address today.
+Performance can also be **brittle:** small changes in input may produce unexpectedly
+different outputs. For example, Wang et al. found that seemingly equivalent medical
+questions often received different answers from generative AI systems. A special form of
+this is sycophancy, where the tool adjusts its answer to match what the user appears to
+want. These problems affect all users, but they may have special impact on people whose
+circumstances are already poorly captured by the model, since there is less basis for the
+tool to fall back on, and on people with cognitive limitations, who may be less able to
+detect and correct unreliable results.
 
-### Brittleness
+### Loss of Context
 
-This refers to changes in behaviour in response to small changes in inputs. It’s
- also called prompt sensitivity. Traditional automation is notoriously brittle,
-in that it commonly responds only to well-formed inputs. An input that is even
-slightly incorrect, or slightly outside the designed scope of a traditional
-tool, may not be processed at all. By contrast, FB tools may respond
-appropriately to a wide range of inputs. For example, questions can often be
-framed in many different ways, and be answered appropriately. However, it can
-also happen that one input gets an appropriate response, and another, that seems
-as if it should be equivalent, gets a different response. For example, [Wang et
-al.](https://www.nature.com/articles/s41746-024-01029-4.pdf ) found that
-seemingly equivalent medical questions often received different answers from FB
-systems.
+AI tools are shaped by the data and settings in which they were created. When they are
+applied outside those boundaries, their reliability may degrade in ways that are difficult
+to predict.
 
-A special form of prompt sensitivity is sycophancy: FB systems will sometimes
-offer answers that the user may appear to want, based on the input the user
-provides.
+**Generalization out of context.** A tool may be applied in a setting, population, or
+domain that differs from the one it was trained or evaluated on. For example, a hiring
+tool trained on data from one industry may perform poorly when used in another, or a
+model trained primarily on English-language text may produce unreliable results for other
+languages or cultural contexts. This affects both task-specific and general-purpose
+tools, and poses particular risks for marginalized groups whose contexts are less likely
+to have been represented in the tool's original setting.
 
-### Hallucination
+**Fabrication.** Generative AI systems sometimes produce plausible-sounding but false
+information, for example by referring to sources that don't actually exist. This is
+sometimes called hallucination. The model lacks the context to distinguish what it knows
+from what it is inventing. This poses issues for all users, but may have special impact
+on people with cognitive limitations, who may be less able to detect and correct
+fabricated results.
 
-Sometimes FB systems fabricate answers, for example by referring to sources of
-information that don’t actually exist.
+**Retrieval errors.** Many tools are given the ability to consult external data sources,
+such as the web or private databases, to compensate for the limits of what was included
+in training. But this introduces its own risks: the tool may frame its query incorrectly,
+retrieve irrelevant or outdated information, or misinterpret what it finds. The tool is
+operating in a context (i.e., the external data source) that it was not trained on
+directly, and its reliability in navigating that context is not guaranteed.
 
-These problems obviously pose issues for all users, but they may have special
-impact on people with cognitive limitations, who may be less able to detect and
-correct them.
+In each of these cases, the common thread is that the tool is being asked to perform
+beyond the boundaries of its training or design. People whose circumstances are unusual
+or underrepresented are more likely to fall outside those boundaries, and are therefore
+more likely to be affected.
 
 ### Opacity
 
-Our understanding of how FB systems actually work is very limited. Although
-their basic structure and operation is completely known, how an FB system
-responds in any given situation is determined by a huge number of parameters,
-interacting in very complex ways. This means that when a problem occurs in an FB
-system, it is in general not clear how to correct it. Further training (fine
-tuning) or adding material to prompts may work, but it is hard to be sure, or to
-know how these corrections may affect other aspects of the system’s behavior.
-This isn’t a problem for users, directly, but it is a problem for tool creators.
+Our understanding of how complex AI systems actually work is very limited. Although their
+basic structure and operation is completely known, how such a system responds in any
+given situation is determined by a huge number of parameters, interacting in very complex
+ways. This means that when a problem occurs, it is in general not clear how to correct
+it. Further training (fine-tuning) or adding material to prompts may work, but it is hard
+to be sure, or to know how these corrections may affect other aspects of the system's
+behavior. This isn't a problem for users directly, but it is a problem for tool creators.
 
-### Variability
-
-Another problem for tool creators is that different FB tools behave differently.
-A tactic that works well for Claude, say adding some language to prompts, may
-work differently for Gemini. This makes it difficult for tool creators to learn
-from one another.
-
-### Problems of lookup
-
-The issues we’ve been discussing apply to the lookup capabilities of FB tools,
-as well as to the core capabilities of such tools. Will the tool frame its
-lookup correctly? Will it interpret what it finds correctly? It’s hard to be
-certain.
+This affects any tool based on complex models, whether task-specific or general-purpose.
 
 ## Mitigating the problems
 
