@@ -29,6 +29,7 @@ Comments may be submitted by any of the means below.
 ----
 
 ## Problem
+this is stuff Clayton is adding as a test
 
 In statistics, an outlier is "an observation that lies an abnormal distance from
 other values in a random sample from a population".[^1] Membership in one or
