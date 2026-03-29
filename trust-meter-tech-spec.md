@@ -2,6 +2,8 @@
 title: Trust meter Introduction
 author:
     - Clayton H. Lewis
+    - Justin Obara
+    - Joseph Scheuhammer
     - Julia Stoyanovich
     - Jason J.G. White
 ---
