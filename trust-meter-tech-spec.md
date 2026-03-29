@@ -244,247 +244,402 @@ This affects any tool based on complex models, whether task-specific or general-
 
 ## Mitigating the problems
 
-### Representation
+The problems described in the previous section arise in different ways depending
+on the kind of AI system involved. **Representation** problems affect any system
+that learns from data, but are most acute for **task-specific supervised
+systems**, where the training examples directly determine what the system can
+and cannot handle well. **Performance problems**, including brittleness and
+sycophancy, are most characteristic of **general-purpose generative systems**,
+though outlier sensitivity affects task-specific systems as well. **Loss of
+context** can occur across all system types, but takes different forms: for
+task-specific systems it arises when the system is applied outside its training
+domain, while for general-purpose generative systems it manifests as
+hallucination and retrieval errors. **Opacity**, as discussed above, is a
+condition that applies to all complex AI systems regardless of type.
 
-The basic approach here is to use a large, inclusive sample when training
-systems. This is easy in principle, but hard in practice, because people vary in
-so many consequential ways. Also, these many differences commonly interact. That
-is, knowing about people with attribute A, and people with attribute B, is not
-enough to know about people that have both attributes. The number of individual
-cases needed for adequate coverage in a training sample may easily be
-impractically large.
+Mitigations similarly vary by system type, and are organized here by strategy
+rather than by problem, since a single strategy often addresses multiple
+problems at once. Within each strategy, we note where guidance is specific to a
+particular kind of AI system. The five strategies are: **Governance
+strategies**, which address the foundational question of whether and how AI
+should be used in a given decision-making context; **Data strategies**, which
+concern how training and example data is collected and curated; **Architectural
+strategies**, which concern how systems are designed and built; **Deployment
+strategies**, which concern how systems are operated; and **Monitoring and
+improvement**, which concern how systems are evaluated and corrected over time.
+Throughout, the pervasive condition of opacity—our limited ability to understand
+why complex AI systems behave as they do—constrains the confidence we can place
+in any mitigation, and this should be borne in mind when reading each
+subsection.
 
-### Averaging
+The guidance in this section is most fully developed for task-specific
+supervised systems and general-purpose generative systems, as these are the
+types for which risks and mitigations are best understood. Task-specific
+unsupervised systems and general-purpose discriminative systems raise related
+concerns, which are noted where relevant, but may warrant further elaboration as
+understanding of these systems matures.
 
-There is a literature on outlier detection that offers tools for determining how
-different a given case is from a collection of other cases. For ET systems, or
-for FB systems with additional examples used in shaping them, it would be
-reasonable to add a processing step in which such an assessment would be made
-for each new case. Cases that are determined to be quite different from the
-examples would be routed for special processing.
+### Governance Strategies
 
-### Brittleness
+The risk of statistical discrimination described in the previous section should
+be weighed carefully in choosing *whether* AI tools should play any role in
+making a given type of decision, and if so, *what* that role should be. There is
+a moment during the development of an AI software project at which these risks
+should be evaluated and strategic choices made about **whether the work should
+proceed**, **with what objectives**, and **in what social context**. By this
+stage, a research system or exploratory prototype may already exist;
+alternatively, the project may only be a proposal. In either case, an evaluation
+of the risks is warranted, taking into account the available mitigations.
 
-As far as we know, this is an unsolved problem for people deploying FB tools.
-Available tools are getting better, over time, but the improvements seem to
-result from the ever-increasing size of the models that large development
-organization are creating. Deployers may just have to wait for these problems to
-be eased by the work of the organizations that command the resources needed for
-this work. We return to the brittleness problem below.
-
-### Sycophancy
-
-Some improvement in this particular form of prompt sensitivity may be possible
-by adding instructions to the prompts: “Don’t tell me what you think I want to
-hear.” As with other aspects of FB behavior, it’s hard to know how effective
-that would be.
-
-### Hallucination
-
-As for brittleness, this problem is shrinking over time, but it’s still there.
-In some cases, lookup facilities can be used to limit hallucinations. If an FB
-system is limited to providing answers that are quoted from a database,
-hallucinations are less likely. This can be approached by adding directives to
-prompts, but one can’t be sure that is completely effective. Another approach
-would be to implement a data flow in which responses come directly from a
-trusted data source, once identified by an FB system. Here the FB could not
-fabricate responses, since it does not respond directly to users.
-
-Another approach to hallucination, that can also be applied for brittleness, is
-the creation of guardrails. A guardrail is a facility that examines the input
-to, or output from, a system, and intervenes in some way to modify the system’s
-response. For example, a guardrail could tell a user that the system can’t
-answer a particular kind of question, if developers have found that
-hallucinations are likely for those questions. Similarly, a guardrail could flag
-questions for which variations in response based on the form of the prompt might
-be risky. Rather than blocking an input, a guardrail could call for special
-processing, for example deliberately reframing a question, and comparing the
-responses obtained for different framings, before responding.
-
-In some applications, it may be possible to maintain a corpus of known, accurate
-responses that the system  can reproduce whenever substantively identical
-queries are made. This approach limits the number of novel responses that need
-to be created by FB systems. However, it is only effective if substantively
-identical prompts can be detected based on semantic similarity searches of the
-corpus.
-
-### Testing
-
-Of course testing is one way to limit problems when systems are deployed.
-Testing for AI tools differs from testing of conventional software, however, in
-consequential ways. For conventional software there is a tightly specified space
-of permissible inputs, and for each input there is a specified correct output.
-For ET systems something like this situation may still hold, at least in
-simple cases. Inputs to the system might be limited to a specified format, and
-in simple cases it may be possible to work out exactly what the correct response
-would be. But often, even for ET systems, it may not be clear what response is
-correct, if an input instantiates a new constellation of attributes.
-
-For FB systems the situation is usually much worse. Part of the value of FB
-systems is their flexibility: there’s no specification of exactly how inputs
-must be expressed. Further, a correct response need not be framed in some
-particular way. Determining that the output produced for a given input is
-complex. As a result, while conventional software testing can be extensively
-automated,  testing of FB tools can usually only be automated by using FB tools
-themselves. This kind of testing that lead to increased confidence that the
-system works properly, but it can’t give the kind of certainty that conventional
-software testing often provides.
-
-Another contrast with conventional software is test coverage. In testing
-conventional software it’s common to devise a suite of test cases for which
-every piece of code in the system must be executed. This doesn’t ensure that all
-possible paths through the code have been tested, but at least each part of the
-system has been found to work, at least in some situation.
-
-There is no comparable notion of test coverage for FB systems. As mentioned
-earlier, their behaviour is produced by the interactions of virtually countless
-numerical parameters. There’s no way to enumerate the ways these should work.
-
-There’s a parallel here with the testing of human employees. We take it for
-granted that there is no way to be certain that a human help-line worker will
-answer all questions correctly. Our millennia-long experience of working with
-humans provides us with some heuristics for assessing whether someone is likely
-to be reliable, though. Do they seem conscientious? Are they good on details? We
-live with the residual uncertainty. So far we lack any comparable grasp of how
-to work with FB systems.
-
-The situation is a bit better for simple ET systems. Some of these map data
-into a geometric space, and testing can explore how the system behaves in
-different regions of this space. However, even if a system looks good viewed in
-this way, the averaging problem means we can’t be sure it will work well for
-unusual cases.
-
-Human in the loop. In view of these uncertainties  surrounding AI systems,
-prudent developers will find ways to provide human oversight over the operation
-of such systems. This is another parallel with working with humans: a prudent
-manager will provide some oversight over what their human employees are doing.
-
-It would be especially useful to provide human oversight on the handling of
-unusual cases. As we’ve seen, these are especially likely to be mishandled,
-especially for ET systems. Even for FB systems, since most of them have a good
-deal of example-based shaping, having a human check the results of cases that
-aren’t much like the examples would be a good idea.
-
-There are some practical problems to be confronted in this prudent scheme.
-First, how are the unusual cases to be identified? One needs to find a method
-that will work for the particular kind of data that one is working with. The
-isolation tree method (Liu, F. T., Ting, K. M., & Zhou, Z. H. (2012).
-Isolation-based anomaly detection. ACM Transactions on Knowledge Discovery from
-Data (TKDD), 6(1), 1-39) has the reputation of being robust and flexible, but
-one would need to try it out on one’s own data. Does it really flag the right
-cases?
-
-A second problem is ensuring that the human checking process would be
-responsibly carried out. Especially if the AI tool works well, it would be easy
-for attention to the checking to flag. Injecting synthetic data for which
-corrections are needed could be a way to maintain vigilance. Then, who is going
-to do the checking? It has to be someone with detailed knowledge of what an
-appropriate response really is, including in unusual cases, not just anybody.
-
-The people who have the most stake in the correct operation of a system are
-often the people whose cases are being handled. There should be an easy feedback
-system in place so that users can speak up when they feel the system has not
-handled their case correctly. If legal rights or interests are at stake,
-effective appeal and review procedures should be put in place to ensure adequate
-human supervision.
-
-The feedback system should include clients having access to human assistance,
-providing a way past the system that hasn’t understood their situation.
-Everybody knows how frustrating it can be when one can’t talk to a person, when
-some system isn’t doing what we need. This frustration won’t be any less when
-systems seem to be more intelligent.
-
-### Continuous improvement
-
-When the AI system gets things wrong, what then? One would like to be able to
-improve the system, so that similar cases are handled correctly in future. As
-discussed above, however, this isn’t so easy. One can’t just patch the AI system
-as one can for fixing bugs in conventional software.
-
-For ET systems >>can someone look in the literature for how one can improve a
-classifier system?<<
-
-For an FB system with lookup, one could give the system the ability to look in a
-database of past cases, when handling a new case. When testing, or user
-experience, reveals problems, descriptions of these cases, and how they should
-have been handled, would be added to this database.
-
-Another approach that could be tried would be adding mishandled cases, with the
-proper handling described, to future prompts. Modern FB systems support very
-long prompts, so a good deal of corrective information could be added in this
-way.
-
-As with other aspects of these systems, these improvement processes need to be
-monitored and checked. For example, adding a case with its proper processing
-does not guarantee that the system will respond correctly to future cases.
-
-## Deciding Whether and What to Automate
-
-Using AI tools in decision-making carries an inherent risk of statistical
-discrimination. People who are under-represented or misrepresented in training
-data are less likely to be classified appropriately by ET systems than cases
-resembling what is average or typical. FB systems are more complex. They are not
-constrained by a set of examples of the decision to be made. They have also
-demonstrated a limited capacity to generalize, for example by applying
-analogical reasoning. This capability makes FB systems more flexible, and it may
-enable them to respond appropriately to people and situations that are not well
-represented in the training corpus. Nevertheless, the risk of discrimination for
-those at the margins of society remains, and it persists despite implementation
-of the risk reduction strategies identified in this report.
-
-This risk of discrimination should be weighed carefully in choosing whether AI
-tools should play any role in making a given type of decision, and if so, what
-this role should be. There is a moment during the development of an AI software
-project at which the risks of harm should be evaluated and strategic choices
-made about whether the work should proceed, with what objectives, and in what
-social context.  By this stage, a research system or an exploratory prototype
-may have already been produced.  Alternatively, the envisaged project may only
-be a more or less well defined proposal. In either case, an evaluation of the
-risks is warranted, taking into account the available mitigations.
-
-In determining what role an AI system should be given in decision-making, the
-risk of statistical discrimination should be balanced against the risks of harm
+The risk of statistical discrimination should be balanced against the risks
 associated with alternative, non-automated means of achieving the same purpose.
-Sometimes, a choice is to be taken between making decisions entirely by human
-effort, and introducing automation into the procedure. Since human
-decision-makers (with or without the assistance of AI) may be biased against
-atypical cases, a fully manual decision-making procedure also risks
-discrimination. Training programs and diversity awareness initiatives can reduce
-human prejudices. Administrative review and procedural fairness requirements can
-identify and overcome some instances of discrimination by individual
-decision-makers. Thus, there are difficult and uncertain choices to be made
-about whether automation would improve the fairness of decision-making compared
-with manual approaches, particularly with respect to members of marginalized
-groups. There are risks and mitigation strategies attached to both human and
-partly or fully automated decision-making procedures. These factors need to be
-assessed, so far as is practicable, in deciding what to automate, and if
-automation is justified, what should be the role of AI systems.
+Since human decision-makers may themselves be biased against atypical cases, a
+fully manual procedure also carries a risk of discrimination. Training programs,
+diversity awareness initiatives, and procedural fairness requirements can reduce
+but not eliminate this risk. There are thus difficult choices to be made about
+whether automation would improve the fairness of decision-making compared with
+manual approaches, particularly for members of marginalized groups.
 
-In other situations a proposed AI system may be intended as a new access path to
-existing information or systems. Such an AI system might sometimes fail, and it
-could fail more often for less common user requests. Such behavior, considered
-on its own, could be discriminatory. Here a comparison is in order between the
-access users would actually get, with and without the AI system. An AI system
-might provide superior access, even if imperfect. This suggests that good
-information about the services provided by existing systems, including
-especially for marginalized users, should be part of the decision making about
-proposed AI systems.
+In some situations a proposed AI system may be **intended as a new access path**
+to existing information or services rather than as a replacement for human
+decision-making. Such a system might fail more often for less common user
+requests.  This behavior could itself be discriminatory. A comparison is
+therefore needed between the access users would actually get, with and without
+the AI system, including especially for marginalized users.
 
-If AI systems are to be used, attention should also be given to building an
-appropriate social context. This may entail, for example, ensuring that human
-decision-makers whom a tool supports are suitably equipped to understand and
-respond to its limitations, and to implement monitoring and mitigation
-techniques.
+If AI systems are to be used, attention should be given to building an
+appropriate social context: ensuring that those who operate or oversee the tool
+are equipped to understand its limitations and to implement monitoring and
+mitigation techniques. This requires a degree of **transparency on the part of
+the system**, about how it works, where it is likely to fail, and what it cannot
+reliably do. Such transparency is a necessary condition for meaningful human
+oversight; without it, those responsible for operating or reviewing the system
+cannot exercise that responsibility effectively.
+
+Meaningful risk evaluation at the governance stage depends on understanding how
+a system works, where it is likely to fail, and for whom. This is constrained by
+opacity, which varies significantly depending on how the system was obtained.
+For systems developed in-house, developers have direct access to training data,
+model architecture, and evaluation results, and transparency is largely within
+their control. For procured systems, including most general-purpose generative
+systems, the information needed to assess risk may be partially or wholly
+unavailable to the deploying organization. This creates an important distinction
+between developers, who control the system's fundamental properties, and
+deployers, who are responsible for its use in a specific context but may have
+limited visibility into how it works. Both bear responsibility for the outcomes
+of deployment, but the mitigations available to each differ substantially, and
+the degree of caution applied at the governance stage should reflect this.
+
+### Data Strategies
+
+The most fundamental mitigation for representation problems is to use large,
+inclusive training data that reflects the diversity of people and circumstances
+the system will encounter in deployment. This is straightforward in principle
+but demanding in practice. People vary in many consequential ways, and these
+differences commonly interact: knowing about people with attribute A, and people
+with attribute B, is not enough to know about people who have both. Adequate
+coverage of intersectional cases requires substantially more data than coverage
+of single attributes considered independently, and full coverage may not be
+achievable. Where it is not, the appropriate response is not to treat the system
+as adequate for all cases, but to document the limits of coverage explicitly and
+to flag cases that fall outside them, an approach we return to under
+**Architectural Strategies** and **Monitoring and Improvement**.
+
+For task-specific unsupervised systems, representational gaps take a distinctive
+form. Rather than producing incorrect labeled outputs, an underrepresented group
+may be rendered invisible: too small or too diffuse to form a meaningful cluster
+of its own, it may be absorbed into a dominant group it does not actually
+resemble, or fragmented across multiple clusters in ways that obscure rather
+than reflect its characteristics. The same principle of inclusive data
+collection applies, but evaluation is harder since there is no ground truth
+label against which to measure whether the system has grouped people
+appropriately.
+
+The points at which data choices matter differ by system type. For task-specific
+supervised systems, the training data is the primary lever and is largely within
+the control of developers. For general-purpose systems, deployers typically have
+no influence over training data; as noted in the Governance section, this is a
+developer responsibility. However, deployers of all system types retain
+meaningful control over other data inputs, and these should be managed with the
+same care as training data:
+
+- _Fine-tuning data_. Where a general-purpose system is adapted for a specific
+use case through fine-tuning, the fine-tuning data should itself be
+representative of the population the system will serve, including marginalized
+groups. A system that performs well on average in its general form may perform
+poorly for specific groups if the fine-tuning data does not reflect their
+circumstances.
+- _In-context examples_. For systems shaped through in-context learning, the
+examples included in prompts act as a form of training data and are subject to
+the same representational risks. Care should be taken to ensure that in-context
+examples do not systematically exclude or misrepresent the groups the system
+will encounter.
+- _Retrieval corpora_. For systems that consult external data sources, the
+content of those sources is a form of data that shapes system behavior.
+Retrieval corpora should be evaluated for coverage and potential
+misrepresentation, and updated regularly to remain current.
+
+For general-purpose discriminative systems, including embedding models used for
+search or classification, the quality of the representations the system produces
+depends on the breadth and balance of the data on which it was trained. A model
+trained on data that underrepresents certain groups or contexts will produce
+lower-quality representations for inputs from those groups, with downstream
+effects on any task the model is used for. Deployers using procured embedding
+models should seek information from developers about training data coverage, and
+should evaluate model performance specifically for the groups and contexts
+relevant to their use case.
+
+In all cases, misrepresentation is as important a concern as
+underrepresentation. Training or shaping data may include members of a group in
+proportions or contexts that distort rather than reflect reality, for instance
+historical data that encodes past patterns of discrimination. Data curation
+should therefore attend not only to whether groups are present in the data, but
+to how they are represented.
+
+Data strategies can reduce representational gaps, but opacity limits our ability
+to verify that they have done so. Even with inclusive training data, it is
+difficult to confirm that a complex model has learned to handle underrepresented
+groups appropriately, since the relationship between training data composition
+and model behavior is not transparent. Evaluation on held-out data from
+underrepresented groups provides evidence, but not certainty. Deployers should
+therefore treat data strategies as a necessary but not sufficient condition for
+fair treatment of marginalized groups.
+
+### Architectural Strategies
+
+Architectural strategies are design decisions made about how a system is built,
+and they represent one of the most direct levers for reducing the risks
+described in the previous section. Some of these strategies are available to
+developers and deployers alike; others, particularly those that require access
+to model internals, are primarily within the developer's control. As noted in
+the Governance section, deployers of procured systems should seek transparency
+from developers about what architectural mitigations have been implemented, and
+should document clearly what additional mitigations they have put in place.
+
+**Out-of-distribution detection**. For task-specific supervised systems, a
+useful architectural mitigation is to add a processing step that assesses how
+similar each new case is to the examples on which the system was trained. Cases
+that differ substantially from those examples are out-of-distribution, and the
+system's behavior on such cases is less reliable. Detecting these cases before
+the system responds allows them to be routed for special handling, for example
+to a human reviewer, rather than processed as though they were well within the
+system's competence. A range of methods exists for this kind of assessment, and
+the appropriate choice will depend on the nature of the data and the system. The
+key requirement is that the method be validated on the specific data the system
+will encounter in deployment, not just on benchmark datasets.
+
+This mitigation connects directly to the data strategies discussed above:
+documenting the limits of training data coverage is a prerequisite for
+identifying which cases are likely to be out-of-distribution. Together, these
+two strategies form the basis for a principled approach to handling unusual
+cases.
+
+**Guardrails** are facilities that examine the input to, or output from, a
+system, and intervene to modify or constrain the system's response. They apply
+across all system types, though their implementation differs. A guardrail might
+inform a user that the system cannot reliably answer a particular kind of
+question; it might flag inputs for which the system's response is likely to be
+unreliable; or it might route inputs to alternative processing rather than
+blocking them outright. Guardrails can also be used to detect and flag
+out-of-distribution cases, complementing the detection strategy described above.
+
+For general-purpose generative systems, guardrails are particularly important
+because the space of possible inputs is essentially unbounded. A guardrail
+cannot anticipate every failure mode, but it can be designed to catch known
+categories of problematic input or output. Deployers have meaningful control
+over guardrails even when they have limited access to model internals, and
+implementing them is therefore a deployer responsibility as much as a developer
+one. Where guardrails are built into a procured system by its developer,
+deployers should seek to understand what they cover and where their limits lie.
+
+**Retrieval constraints**. For generative systems that consult external data
+sources, architectural choices about how retrieval is implemented can reduce
+both hallucination and loss-of-context problems. Where it is feasible to limit
+the system to responses that are grounded in retrieved content rather than
+generated freely, the risk of fabrication is reduced. A stronger version of this
+approach implements retrieval as a data flow in which responses come directly
+from a trusted source once identified by the system, rather than being generated
+by the system itself. This does not eliminate retrieval errors, but it removes
+the system's ability to fabricate content that has no basis in the source
+material.
+
+**Sycophancy**, where a system adjusts its responses to match what a user
+appears to want rather than what is accurate, is addressed primarily through
+alignment techniques applied by developers during training, and is largely
+outside the control of deployers. Fine-tuning on carefully curated examples may
+help, but it is difficult to verify that such adjustments reliably reduce
+sycophancy without affecting other aspects of system behavior. Deployers have
+limited architectural levers here; prompt design offers some mitigation, and is
+discussed under Deployment Strategies.
+
+Opacity limits confidence in all of the architectural mitigations described
+here. Out-of-distribution detection can flag unusual cases, but cannot fully
+characterize why a system is likely to fail on them. Guardrails can catch known
+failure modes, but cannot anticipate failure modes that are not yet understood.
+Retrieval constraints reduce but do not eliminate fabrication, and it is
+difficult to verify that a system is consistently respecting those constraints
+in practice. Implementers should treat architectural mitigations as
+risk-reducing rather than risk-eliminating measures.
+
+### Deployment Strategies
+
+Deployment strategies concern how AI systems are operated once in production.
+Unlike the strategies discussed in previous sections, they are almost entirely
+within the control of deployers, and apply regardless of whether the system was
+developed in-house or procured.
+
+**Human oversight.** In view of the uncertainties surrounding AI systems,
+deployers should provide meaningful human oversight over their operation. This
+is particularly important for unusual cases, which, as discussed in the previous
+sections, are the most likely to be mishandled. Where out-of-distribution
+detection has been implemented as an architectural measure, the routing of
+flagged cases to human reviewers is the corresponding deployment practice. Where
+it has not, deployers should establish alternative criteria for identifying
+cases that warrant human review.
+
+A practical difficulty arises when a system performs well in the majority of
+cases: sustained attention to oversight tends to diminish when errors are rare.
+One approach to maintaining vigilance is to periodically inject synthetic cases
+for which the correct response is known and a specific kind of error is likely,
+without the reviewer being aware that the case is synthetic. This allows
+deployers to monitor whether human oversight is being exercised effectively, and
+to intervene when attention lapses.
+
+Human oversight is only effective if carried out by people with the knowledge
+needed to evaluate whether a response is appropriate, including for unusual
+cases. Assigning oversight responsibilities to people who lack this knowledge
+provides a false sense of assurance without the substance.
+
+**User feedback and appeals.** The people with the greatest stake in the correct
+operation of a system are often those whose cases it handles. Deployers should
+therefore put in place accessible mechanisms through which users can indicate
+when they believe a system has not handled their case correctly. Where legal
+rights or significant interests are at stake, effective appeal and review
+procedures should be established to ensure adequate human supervision of
+contested decisions.
+
+Feedback mechanisms should also include access to human assistance, providing a
+route past the automated system for users whose situations it has not handled
+well. This is both a fairness measure and a practical one: users who cannot
+obtain appropriate assistance through an automated system will not simply accept
+an inadequate response, and the costs of unresolved failures can be substantial.
+
+**Prompt design.** For general-purpose generative systems, the design of prompts
+is a meaningful deployment lever that can mitigate several of the problems
+described in the previous section. Explicitly providing context about the user's
+situation in the prompt can reduce loss-of-context failures, since the system is
+less likely to respond inappropriately when relevant circumstances are made
+explicit rather than assumed. Deliberately varying the framing of a query and
+comparing responses across framings can help detect brittleness: if
+substantively identical queries produce substantially different responses, the
+system's reliability for that kind of query is in question. For sycophancy,
+explicit prompt instructions asking the system not to tailor its response to
+perceived user preferences offer some mitigation, though the reliability of this
+approach is difficult to verify and should not be treated as a complete
+solution.
+
+Prompt design is a deployer responsibility, but its effectiveness is constrained
+by properties of the underlying model that deployers do not control. Deployers
+should therefore treat prompt design as a complement to, rather than a
+substitute for, the architectural and data strategies discussed in previous
+sections.
+
+Opacity creates a particular challenge for human oversight in deployment.
+Reviewers examining the output of a complex AI system cannot in general
+understand why the system produced a given response, which limits their ability
+to assess whether it is reliable or to anticipate how the system might fail on
+similar cases in the future. Feedback mechanisms and appeals processes can
+identify that something has gone wrong, but typically cannot explain why.
+Deployers should be explicit with human reviewers about this limitation, and
+should design oversight processes that do not assume reviewers can fully
+evaluate the reasoning behind system outputs.
+
+### Monitoring and Improvement Strategies
+
+**Testing** is an essential mitigation, but its scope and reliability differ
+substantially from testing of conventional software. For conventional software,
+the space of valid inputs is specified in advance, and for each input there is a
+correct output; testing can therefore be systematic and its coverage measurable.
+
+For task-specific supervised systems, something approaching this situation may
+hold in simple cases, where inputs are constrained to a specified format. Even
+here, however, it may not always be clear what the correct response is for an
+input that instantiates an unusual combination of attributes. Testing should
+explore how the system behaves across the range of cases it will encounter in
+deployment, with particular attention to cases involving groups that are
+underrepresented in training data.
+
+For general-purpose generative systems the situation is considerably harder. The
+flexibility that makes these systems useful, such as unconstrained inputs, and
+outputs that need not take any particular form, also makes systematic testing
+difficult. Testing can increase confidence that a system works adequately, but
+it cannot provide the certainty that conventional software testing often
+achieves. In practice, automated testing of generative systems typically relies
+on other generative systems to evaluate outputs, which introduces its own
+uncertainties.
+
+In both cases, testing should specifically target unusual and edge cases, since
+these are the most likely to be mishandled and the least likely to be caught by
+tests designed around typical inputs.
+
+Opacity compounds the limitations of testing for AI systems. Even when a system
+passes a carefully designed test suite, it is not possible to fully understand
+why it behaves as it does, or to be confident that good performance on tested
+cases reflects reliable behavior on untested ones. This is particularly
+consequential for unusual cases involving marginalized groups, where test
+coverage is hardest to achieve and the consequences of failure are greatest.
+
+**Continuous improvement.** When a system produces incorrect or inadequate
+responses, deployers should have processes in place to act on this. The
+appropriate mechanism depends on the system type.
+
+For task-specific supervised systems, the primary approach is retraining:
+incorporating corrected cases into the training data and retraining the model,
+or using targeted techniques such as active learning to prioritize the labeling
+of cases in regions of the input space where the system performs poorly. Any
+retraining should be followed by testing to verify that performance has improved
+for the targeted cases without degrading for others.
+
+For general-purpose generative systems, retraining is typically not available to
+deployers. Two practical alternatives exist. First, where a system has retrieval
+capabilities, a database of past cases and their correct handling can be made
+available to the system, allowing it to consult prior experience when handling
+similar new cases. Second, corrected cases with their appropriate responses can
+be added to prompts, drawing on the capacity of modern generative systems to
+learn from in-context examples. Both approaches require monitoring to verify
+that they have the intended effect, since neither guarantees that the system
+will generalize correctly from the added material.
+
+Across all system types, improvement processes should themselves be subject to
+oversight. Corrections that appear to work in testing may not generalize
+reliably to new cases, and changes intended to improve performance in one area
+may have unintended effects elsewhere. The opacity of complex AI systems means
+that improvement can rarely be verified with certainty; it can only be made more
+or less probable through careful testing and monitoring.
 
 ## Conclusion
 
-AI systems have promise in allowing agencies to provide better service, within
-the always-pressing resource limitations that they face. Unfortunately they may
-also pose problems for people in situations that aren’t common, who may have
-questions that aren’t frequently asked, or need services that aren’t often
-called for.  These same problems beset human-provided services, too. Can we
-harness AI, with its flexibility, and ability to process vast amounts of
-information, to do better?
+AI systems offer genuine potential for improving the quality and consistency of
+decisions and services, within the resource constraints that implementers,
+developers, and deployers invariably face. But that potential comes with risks
+that this specification has sought to make concrete: systems that perform well
+on average may perform poorly for people whose circumstances are unusual, and
+those people are often the ones who most need reliable and fair treatment.
+
+The mitigations described in this specification do not eliminate these risks.
+Data strategies can reduce but not close representational gaps. Architectural
+and deployment strategies can catch and route unusual cases, but depend on
+opacity being at least partially offset by transparency. Monitoring and
+improvement can correct known failures, but cannot guarantee that corrections
+generalize. Governance can frame the decision about whether and how to deploy AI
+thoughtfully, but cannot substitute for ongoing vigilance once systems are in
+operation.
+
+What this specification does offer is a structured basis for that vigilance: a
+way of asking, at each stage of development and deployment, whether the risks to
+people at the margins have been taken seriously and whether the available
+mitigations have been applied. That is not a guarantee of fairness, but it is a
+necessary condition for it.
 
 
 
