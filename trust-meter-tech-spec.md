@@ -142,6 +142,43 @@ often **adapted** to a specific task through one of several mechanisms:
   or organizational policies. This allows the tool to draw on current and specific
   information that was not part of its training data.
 
+## Statistical Discrimination
+
+When an AI system with a role in decision-making exhibits bias against
+individuals due to presumed, often stereotyped, characteristics of marginalized
+goups to which they belong, it  contributes to _statistical discrimination_.
+This type of discrimination is generally morally and legally problematic.
+It can occur under conditions in which a person's group identity is explicitly
+disclosed to an AI tool. However, it can also arise in cases in which the group
+identity is excluded from the data made available to the system, but
+nevertheless becomes salient to the decisions via proxy variables. For example,
+if members of a certain ethnic minority are concentrated in a segregated
+suburb, an ET system might "learn" to discriminate against residents of this
+locality, which thus serves as proxy for the marginalized ethnic identity.
+
+Moreover, even if proxy variables are not at issue, data about members of 
+marginalized groups  can readily be different from the typical or average cases 
+on which AI systems perform relatively well. For example, a group member may 
+have a lower socio-economic status than average, or a frequently interrupted 
+employment history, which increases the risk of misclassification.
+
+However statistical discrimination emerges in the operation of an AI tool, the 
+effect is to automate and reinforce existing prejudices, stereotypes, and 
+discriminatory practices against marginalized groups. The AI technology becomes 
+an amplifier of established social inequalities. Machine learning algorithms 
+enable negative assumptions about marginaized groups to be internalized by an AI 
+system and to influence subsequent decisions, potentially in unanticipated ways.
+
+Outliers are particularly at risk of statistical discrimination, owing to the 
+under-representation of their diverse capabilities, needs and circumstances in 
+data on which a system is trained. Disability is a perspicuous example, in that 
+having a disability essentially amounts to being different from a societal norm, 
+and thus tending to be an outlier in ways that affect consequential decisions.
+
+Preventing and mitigating the misclassification or mistreatment of outliers in 
+AI tools can accordingly be understood as a strategy for reducing immoral and 
+unlawful forms of statistical discrimination
+
 ## Potential Problems for Marginalized Groups
 
 Different kinds of AI tools present different kinds of problems, with different possible
