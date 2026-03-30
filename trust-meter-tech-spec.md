@@ -387,7 +387,7 @@ to flag cases that fall outside them, an approach we return to under
 **Architectural Strategies** and **Monitoring and Improvement**.
 
 For task-specific unsupervised systems, representational gaps take a distinctive
-form. Rather than producing incorrect labeled outputs, an underrepresented group
+form. Rather than producing incorrectly labeled outputs, an underrepresented group
 may be rendered invisible: too small or too diffuse to form a meaningful cluster
 of its own, it may be absorbed into a dominant group it does not actually
 resemble, or fragmented across multiple clusters in ways that obscure rather
