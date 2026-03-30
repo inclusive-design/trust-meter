@@ -156,27 +156,27 @@ if members of a certain ethnic minority are concentrated in a segregated
 suburb, an ET system might "learn" to discriminate against residents of this
 locality, which thus serves as proxy for the marginalized ethnic identity.
 
-Moreover, even if proxy variables are not at issue, data about members of 
-marginalized groups  can readily be different from the typical or average cases 
-on which AI systems perform relatively well. For example, a group member may 
-have a lower socio-economic status than average, or a frequently interrupted 
+Moreover, even if proxy variables are not at issue, data about members of
+marginalized groups  can readily be different from the typical or average cases
+on which AI systems perform relatively well. For example, a group member may
+have a lower socio-economic status than average, or a frequently interrupted
 employment history, which increases the risk of misclassification.
 
-However statistical discrimination emerges in the operation of an AI tool, the 
-effect is to automate and reinforce existing prejudices, stereotypes, and 
-discriminatory practices against marginalized groups. The AI technology becomes 
-an amplifier of established social inequalities. Machine learning algorithms 
-enable negative assumptions about marginaized groups to be internalized by an AI 
+However statistical discrimination emerges in the operation of an AI tool, the
+effect is to automate and reinforce existing prejudices, stereotypes, and
+discriminatory practices against marginalized groups. The AI technology becomes
+an amplifier of established social inequalities. Machine learning algorithms
+enable negative assumptions about marginaized groups to be internalized by an AI
 system and to influence subsequent decisions, potentially in unanticipated ways.
 
-Outliers are particularly at risk of statistical discrimination, owing to the 
-under-representation of their diverse capabilities, needs and circumstances in 
-data on which a system is trained. Disability is a perspicuous example, in that 
-having a disability essentially amounts to being different from a societal norm, 
+Outliers are particularly at risk of statistical discrimination, owing to the
+under-representation of their diverse capabilities, needs and circumstances in
+data on which a system is trained. Disability is a perspicuous example, in that
+having a disability essentially amounts to being different from a societal norm,
 and thus tending to be an outlier in ways that affect consequential decisions.
 
-Preventing and mitigating the misclassification or mistreatment of outliers in 
-AI tools can accordingly be understood as a strategy for reducing immoral and 
+Preventing and mitigating the misclassification or mistreatment of outliers in
+AI tools can accordingly be understood as a strategy for reducing immoral and
 unlawful forms of statistical discrimination
 
 ## Potential Problems for Marginalized Groups
@@ -236,9 +236,11 @@ cognitive limitations, who may be less able to detect and correct unreliable res
 
 ### Loss of Context
 
-AI tools are shaped by the data and settings in which they were created. When they are
-applied outside those boundaries, their reliability may degrade in ways that are difficult
-to predict.
+AI tools are shaped by the data and settings in which they were created. Context here
+refers not only to the statistical conditions of training (the data, domain, and
+population the tool was developed on) but also to the information and grounding a tool
+would need to produce reliable outputs. When either form of context is missing,
+reliability may degrade in ways that are difficult to predict.
 
 **Generalization out of context.** A tool may be applied in a setting, population, or
 domain that differs from the one it was trained or evaluated on. For example, a hiring
@@ -251,21 +253,24 @@ to have been represented in the tool's original setting.
 **Fabrication.** Generative AI systems sometimes produce plausible-sounding but false
 information, for example by referring to sources that don't actually exist. This is
 sometimes called hallucination. The model lacks the context to distinguish what it knows
-from what it is inventing. This poses issues for all users, but may have special impact
-on people with cognitive limitations, who may be less able to detect and correct
-fabricated results.
+from what it is inventing. This is not solely a problem of using the tool outside its
+original training conditions; it arises from the basic nature of generative training, in
+which the model learns to produce plausible outputs without tracking their evidential
+basis. Fabrication can therefore occur even on topics well represented in the training
+data. This poses issues for all users, but may have special impact on people with
+cognitive limitations, who may be less able to detect and correct fabricated results.
 
 **Retrieval errors.** Many tools are given the ability to consult external data sources,
 such as the web or private databases, to compensate for the limits of what was included
 in training. But this introduces its own risks: the tool may frame its query incorrectly,
 retrieve irrelevant or outdated information, or misinterpret what it finds. The tool is
 operating in a context (i.e., the external data source) that it was not trained on
-directly, and its reliability in navigating that context is not guaranteed.
+directly. It lacks the grounding to reliably navigate, evaluate, and interpret material
+from these sources, and its reliability in doing so is not guaranteed.
 
-In each of these cases, the common thread is that the tool is being asked to perform
-beyond the boundaries of its training or design. People whose circumstances are unusual
-or underrepresented are more likely to fall outside those boundaries, and are therefore
-more likely to be affected.
+In each of these cases, the tool is operating without sufficient context to constrain its
+behavior reliably. People whose circumstances are unusual or underrepresented are more
+likely to fall outside those boundaries, and are therefore more likely to be affected.
 
 ### Opacity
 
@@ -509,7 +514,17 @@ sycophancy without affecting other aspects of system behavior. Deployers have
 limited architectural levers here; prompt design offers some mitigation, and is
 discussed under Deployment Strategies.
 
-Opacity limits confidence in all of the architectural mitigations described
+**Model selection and replaceability.** The problems described in the previous section,
+particularly fabrication and loss of context, vary significantly across models, and newer
+models often improve on known failure modes. Developers should track failure rates for
+the specific tasks their system performs and evaluate whether alternative or more recent
+models reduce those rates. To make this practical, systems should be designed so that the
+underlying model can be replaced without requiring a major redesign. This means avoiding
+tight coupling to a single vendor's API or capabilities, both in code and in contractual
+arrangements. Model selection is not a one-time decision but an ongoing one, and the
+architecture should support that.
+
+**Opacity** limits confidence in all of the architectural mitigations described
 here. Out-of-distribution detection can flag unusual cases, but cannot fully
 characterize why a system is likely to fail on them. Guardrails can catch known
 failure modes, but cannot anticipate failure modes that are not yet understood.
