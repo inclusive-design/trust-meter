@@ -208,7 +208,7 @@ all — not enough data to even compute meaningful statistics.
 
 ### Performance Problems
 
-AI tools are typically evaluated using **aggregate performance metrics*:** a single
+AI tools are typically evaluated using **aggregate performance metrics**: a single
 number that summarizes how well the tool does across all examples. These metrics
 naturally reward doing well on common cases, since those contribute most to the overall
 score. A tool can appear to perform well on average while performing poorly for groups or
@@ -322,7 +322,7 @@ understanding of these systems matures.
 
 ### Governance Strategies
 
-The risk of statistical discrimination described in the previous section should
+The risk of statistical discrimination described earlier in this report should
 be weighed carefully in choosing *whether* AI tools should play any role in
 making a given type of decision, and if so, *what* that role should be. There is
 a moment during the development of an AI software project at which these risks
@@ -348,7 +348,7 @@ requests.  This behavior could itself be discriminatory. A comparison is
 therefore needed between the access users would actually get, with and without
 the AI system, including especially for marginalized users.
 
-If AI systems are to be used, attention should be given to building an
+If an AI system is to be used, attention should be given to building an
 appropriate social context: ensuring that those who operate or oversee the tool
 are equipped to understand its limitations and to implement monitoring and
 mitigation techniques. This requires a degree of **transparency on the part of
