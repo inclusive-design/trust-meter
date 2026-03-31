@@ -1,5 +1,11 @@
 ---
 title: Trust meter Introduction
+author:
+    - Clayton H. Lewis
+    - Justin Obara
+    - Joseph Scheuhammer
+    - Julia Stoyanovich
+    - Jason J.G. White
 ---
 
 ## Cover Note {-}
@@ -692,6 +698,21 @@ people at the margins have been taken seriously and whether the available
 mitigations have been applied. That is not a guarantee of fairness, but it is a
 necessary condition for it.
 
+## Acknowledgments
 
+We acknowledge with gratitude the following participants in this project.
 
+* Prithy Ahmed, Standards Council of Canada
+* Clayton H. Lewis, University of Colorado Boulder
+* Cindy Li, OCAD University
+* Justin Obara, OCAD University
+* David Rokeby, University of Toronto
+* Joseph Scheuhammer, OCAD University
+* Julia Stoyanovich, New York University
+* Jutta Treviranus, OCAD University
+* Jason J.G. White, individual participant
+
+## Copyright and License
+
+This publication is copyright 2026 by OCAD University, and distributed under the terms of the [Creative Commons Attribution ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
