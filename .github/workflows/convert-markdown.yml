@@ -27,7 +27,8 @@ jobs:
             -o "${{ matrix.fileNames }}.${{ matrix.formats }}"
             "./${{ matrix.fileNames }}.md"
 
-      - uses: actions/upload-artifact@v7
+      - name: Upload "${{ matrix.fileNames }}.${{ matrix.formats }}"
+        uses: actions/upload-artifact@v7
         with:
-          name: ${{ matrix.formats }}
+          name: "${{ matrix.fileNames }}.${{ matrix.formats }}"
           path: "${{ matrix.fileNames }}.${{ matrix.formats }}"
