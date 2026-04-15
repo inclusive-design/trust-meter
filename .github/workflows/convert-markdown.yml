@@ -9,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        formats: [html, epub, docx, pdf]
+        # Removed PDF generation as Pandoc via Latex was running into issues converting the document.
+        formats: [html, epub, docx]
         fileNames: [trust-meter-tech-spec, spécification-technique-indicateur-de-confiance]
 
     steps:
