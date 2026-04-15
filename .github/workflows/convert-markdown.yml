@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         formats: [html, epub, docx, pdf]
-        fileNames: [trust-meter-tech-spec]
+        fileNames: [trust-meter-tech-spec, spécification-technique-indicateur-de-confiance]
 
     steps:
       - name: Checkout source
