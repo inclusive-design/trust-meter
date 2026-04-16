@@ -94,7 +94,7 @@ est disponible en [française](spécification-technique-indicateur-de-confiance.
 
 Les contributions à la spécification technique – Indicateur de confiance peuvent se faire
 de plusieurs façons :
-- [ouvrir un billet](https://github.com/inclusive-design/trust-meter/issues) (« issue ») ;
+- [signaler un problème](https://github.com/inclusive-design/trust-meter/issues) (« issue ») ;
 - participer aux discussions dans
 [les billets](https://github.com/inclusive-design/trust-meter/issues) et les
 [demandes d’extraction](https://github.com/inclusive-design/trust-meter/pulls)
