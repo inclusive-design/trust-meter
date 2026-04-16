@@ -1,14 +1,41 @@
-# Trust meter Documents
-This repository contains work of the Trust meter Technical Committee.
+# Trust Meter
 
-## Contribution
-The technical specification is written in Pandoc Markdown.
+The Trust Meter Technical Specification, a non normative technical specification funded by the Standards Council of Canada’s AI and Data Governance program.
+
+The Trust Meter addresses statistical discrimination in AI supported decision making,
+particularly harms that arise when individuals or groups are out of distribution relative
+to the data on which AI systems are trained. These risks are especially relevant for
+marginalized groups, including people with disabilities, whose circumstances are often
+poorly captured by aggregate data.
+
+Please visit the [Trust Meter](https://standards.inclusivedesign.ca/projects/trust-meter/)
+project page for more information.
+
+## Contributing
+
+The technical specification source is available in both English and French version.
+
+The Trust Meter Technical Specification is written in Pandoc Markdown, and available in
+both [English](trust-meter-tech-spec.md) and
+[French](spécification-technique-indicateur-de-confiance.md).
+
+Contributions to the Trust Meter Technical Specification may be done by:
+- Opening an [Issue](https://github.com/inclusive-design/trust-meter/issues)
+- Participating in discussions on
+[Issues](https://github.com/inclusive-design/trust-meter/issues) and
+[Pull Requests](https://github.com/inclusive-design/trust-meter/pulls)
+- Submitting change requests via
+[Pull Request](https://github.com/inclusive-design/trust-meter/pulls) against the documents
+in the [`draft`](https://github.com/inclusive-design/trust-meter/tree/draft) branch.
+
+Comments do not require a CLA. If you plan to contribute material that may be incorporated into the specification, please complete the [Contribution License Agreement
+(CLA)](https://forms.office.com/pages/responsepage.aspx?id=0WnkBiotj0aum33wlo62199fYthCJCZAjMYVyFj1V1dURFk4NUlVVTdFS1lZTkRYTzY4MzVZUllTNiQlQCN0PWcu&route=shorturl).
 
 ## Converting markdown to other formats
 
 ### Automated conversion
 
-As changes to the technical specifcation are merged into the `main` and `draft` branches, a GitHub actions workflow is triggered to convert the technical specification into various other document formats (DOCX, EPUB, HTML, PDF).
+As changes to the technical specifcation are merged into the `main` and `draft` branches, a GitHub actions workflow is triggered to convert the technical specification into various other document formats (DOCX, EPUB, HTML).
 
 When the documents are generated they are stored as artifacts on the workflow run for a maximum of 90 days. To access them go to the repository's [Actions](https://github.com/inclusive-design/trust-meter/actions) page. The "Generate Documents" workflow shows all of the workflow runs. They are ordered by the date run and indicate which commit and from which branch they were generated. Opening any of them will show the results of the workflow run and include the set of artifacts at the bottom. Clicking on the artifact will download a copy locally (note you may need to unzip the downloaded file).
 
@@ -18,6 +45,6 @@ Pandoc and GNU Make are required to build rendered versions using the included m
 
 If TeX is not installed and PDF output is not considered necessary, you can run `make -k` to continue processing the makefile despite the failure of the PDF target.
 
-# Copyright
-The document maintained in this repository is copyright 2026 by OCAD University, and distributed under the terms of the [Creative Commons Attribution ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
+## Copyright
 
+The document maintained in this repository is copyright 2026 by OCAD University, and distributed under the terms of the [Creative Commons Attribution ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
