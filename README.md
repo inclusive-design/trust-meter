@@ -92,7 +92,7 @@ La Spécification technique – Indicateur de confiance est rédigée en Markdow
 est disponible en [française](spécification-technique-indicateur-de-confiance.md) et en
 [anglaise](trust-meter-tech-spec.md).
 
-Les contributions à la Spécification technique – Indicateur de confiance peuvent se faire
+Les contributions à la spécification technique – Indicateur de confiance peuvent se faire
 de plusieurs façons :
 - [ouvrir un billet](https://github.com/inclusive-design/trust-meter/issues) (« issue ») ;
 - participer aux discussions dans
