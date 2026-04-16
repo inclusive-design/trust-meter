@@ -135,7 +135,7 @@ Par défaut, les formats HTML, PDF et Office Open XML / Microsoft Word sont gén
 de l’exécution de la commande make.
 
 Si TeX n’est pas installé et que la sortie PDF n’est pas nécessaire, vous pouvez exécuter
-la commande make -k afin de poursuivre le traitement du makefile malgré l’échec de la
+la commande `make -k` afin de poursuivre le traitement du makefile malgré l’échec de la
 cible PDF.
 
 ## Droit d’auteur
