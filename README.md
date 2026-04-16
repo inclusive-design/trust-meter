@@ -70,7 +70,7 @@ distributed under the terms of the
 
 # Indicateur de confiance
 
-La Spécification technique – Indicateur de confiance est une spécification technique non
+La spécification technique – Indicateur de confiance est une spécification technique non
 normative financée par le programme sur l’IA et la gouvernance des données du Conseil
 canadien des normes.
 
