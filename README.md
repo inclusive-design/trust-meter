@@ -96,8 +96,8 @@ Les contributions à la spécification technique – Indicateur de confiance peu
 de plusieurs façons :
 - [signaler un problème](https://github.com/inclusive-design/trust-meter/issues) (« issue ») ;
 - participer aux discussions dans
-[les billets](https://github.com/inclusive-design/trust-meter/issues) et les
-[demandes d’extraction](https://github.com/inclusive-design/trust-meter/pulls)
+[les problèmes](https://github.com/inclusive-design/trust-meter/issues) et les
+[demandes de fusion](https://github.com/inclusive-design/trust-meter/pulls)
 (« pull requests ») ;
 - soumettre des demandes de modification au moyen d’une
 [demande d’extraction](https://github.com/inclusive-design/trust-meter/pulls) visant les
