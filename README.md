@@ -100,7 +100,7 @@ de plusieurs façons :
 [demandes de fusion](https://github.com/inclusive-design/trust-meter/pulls)
 (« pull requests ») ;
 - soumettre des demandes de modification au moyen d’une
-[demande d’extraction](https://github.com/inclusive-design/trust-meter/pulls) visant les
+[demande de fusion](https://github.com/inclusive-design/trust-meter/pulls) visant les
 documents de la [branche draft](https://github.com/inclusive-design/trust-meter/tree/draft).
 
 Les commentaires ne nécessitent pas d’entente de licence de contributeur (CLA).
