@@ -60,16 +60,16 @@ une combinaison de ces caractéristiques.
 
 Les termes de référence définissent la portée du présent rapport comme suit.
 
->Le Trust Meter est une spécification technique non normative portant sur la
+>Le Indicateur de confiance est une spécification technique non normative portant sur la
 >discrimination statistique visant les valeurs aberrantes dans les données et les petites
 >minorités dans les processus de raisonnement statistique automatisé des outils de prise
->de décision fondés sur l’intelligence artificielle. La spécification technique Trust
->Meter constitue un cadre fournissant des orientations aux responsables de la mise en
->œuvre de systèmes d’intelligence artificielle afin de les aider à comprendre et à
->anticiper les préjudices potentiels. Par exemple, lorsqu’une décision porte sur un cas,
->un groupe ou une personne se situant hors distribution par rapport à l’ensemble de
->données sur lequel le modèle a été entraîné, les décisions du système d’intelligence
->artificielle dans ce contexte peuvent être peu fiables.
+>de décision fondés sur l’intelligence artificielle. La spécification technique
+>Indicateur de confiance constitue un cadre fournissant des orientations aux responsables
+>de la mise en œuvre de systèmes d’intelligence artificielle afin de les aider à
+>comprendre et à anticiper les préjudices potentiels. Par exemple, lorsqu’une décision
+>porte sur un cas, un groupe ou une personne se situant hors distribution par rapport à
+>l’ensemble de données sur lequel le modèle a été entraîné, les décisions du système
+>d’intelligence artificielle dans ce contexte peuvent être peu fiables.
 
 Compte tenu de la diversité des systèmes d’intelligence artificielle susceptibles de
 jouer un rôle dans la prise de décision, la portée est interprétée selon les éléments
@@ -101,10 +101,11 @@ de transparence, d’impacts écologiques comme la consommation d’énergie et 
 préjudices pour les communautés. Ces préoccupations sont importantes et méritent une
 attention particulière, mais elles sont hors de la portée de la présente spécification.
 
-Le Trust Meter ne prescrit pas de techniques particulières de mise en œuvre ou de suivi.
-Il peut indiquer ou suggérer des approches susceptibles d’éclairer l’élaboration de
-telles techniques, mais toute méthode concrète de mise en œuvre ou de suivi devrait être
-déterminée au cas par cas et au moyen de processus propres à chaque système.
+Le Indicateur de confiance ne prescrit pas de techniques particulières de mise en œuvre
+ou de suivi. Il peut indiquer ou suggérer des approches susceptibles d’éclairer
+l’élaboration de telles techniques, mais toute méthode concrète de mise en œuvre ou de
+suivi devrait être déterminée au cas par cas et au moyen de processus propres à chaque
+système.
 
 ## Types d’outils d’intelligence artificielle
 
